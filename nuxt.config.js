@@ -45,10 +45,10 @@ export default {
       fallbackLocale: 'en',
       messages: {
         en: {
-          welcome: 'Welcome'
+          welcome: 'Flo',
         },
         fr: {
-          welcome: 'Bienvenue'
+          welcome: 'Flo'
         },
         
       }

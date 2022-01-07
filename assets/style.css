@@ -4,6 +4,83 @@
     --backColor1 : #F2D2BA;
     --backColor2 : #F5D8C2;
     --backColor3 : #FADFCB;
+    --backColor4: #D2B39B;
+    --backColor5 : #EDD4C1;
     --fontColor1 : #fff;
     --fontColor2 : #A5836A;
+    --fontColor3: #855C2C;
+    --fontColor4: #9F7645;
+}
+@font-face {
+    font-family: Quicksand;
+    src: url(fonts/Quicksand-Light.ttf);
+    font-weight: lighter;
+  }
+  @font-face {
+    font-family: Casta;
+    src: url(fonts/Casta-Thin.otf);
+    font-weight: normal;
+  }
+html{
+    scroll-behavior: smooth;
+}
+body{
+    margin: 0;
+    overflow-x: hidden;
+    background-color: var(--mainColor);
+}
+.titlesContainer{
+  height:300px;
+  width: 65vw;
+  margin: 20vh auto 0 auto;
+  text-align: center;
+  color: var(--fontColor3);
+  line-height: 10px;
+}
+.mainTitle{
+  text-transform: uppercase;
+}
+.name{
+  color: var(--fontColor4);
+  font-size: 36px;
+}
+.header{
+    height:90vh;
+    width:100vw;
+    font-family: 'Casta', sans-serif;
+    font-weight: 400;
+}
+.arrowContainer{
+  width: 75px;
+  height: 90px;
+  margin: 65vh auto 0 auto;
+}
+.arrow{
+  width:15px;
+  cursor: pointer;
+}
+.arrow:hover {
+  animation-name: floating;
+  animation-duration: 2.5s;
+  animation-iteration-count: infinite;
+  animation-timing-function: ease-in-out;
+}
+@keyframes floating {
+  0% { transform: translate(0,  0px); }
+  50%  { transform: translate(0, 10px); }
+  100%   { transform: translate(0, 0px); }   
+}
+div[class$="Container"]{
+  width: 100vw;
+  height:100vh;
+  /*border:1px solid black; dev arg*/
+}
+.menuContainer{
+  background: var(--secondColor);
+}
+.designContainer{
+  background-color: var(--backColor4);
+}
+.motionDesignContainer, .contactContainer{
+  background-color: var(--backColor3);
 }
