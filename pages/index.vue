@@ -14,21 +14,20 @@
       <!-- tree stuff-->
       
     </div>
-    <Navbar />
+    
     <div class="aboutContainer">
-      
+      <Navbar />
     </div>
-    <Navbar />
     <div class="designContainer">
-      
+      <Navbar />
     </div>
-    <Navbar />
+    
     <div class="motionDesignContainer">
-      
+      <Navbar />
     </div>
-    <Navbar />
+    
     <div class="contactContainer">
-      
+      <Navbar />
     </div>
 
   </div>

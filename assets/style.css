@@ -73,7 +73,7 @@ body{
 div[class$="Container"]{
   width: 100vw;
   height:100vh;
-  /*border:1px solid black; dev arg*/
+  /*border:1px solid black; dev */
 }
 .menuContainer{
   background: var(--secondColor);
@@ -83,4 +83,8 @@ div[class$="Container"]{
 }
 .motionDesignContainer, .contactContainer{
   background-color: var(--backColor3);
+}
+a{
+  text-decoration: none;
+  font-family: Casta, 'sans-serif';
 }
