@@ -17,12 +17,30 @@
     
     <div class="aboutContainer">
       <Navbar />
+      <div class="aboutmeSubContainer">
+        <div class="aboutmeTitleContainer">
+          <h2 class="aboutmeTitle">{{ $t('about_me')}}</h2>
+        </div>
+        <div class="aboutmeFlexContainer">
+          <div class="aboutImgContainer">
+            <img :src="require('../assets/img/about.png')" alt="about me" class="aboutmeImg">
+          </div>
+          <div class="aboutTextContainer">
+            <p class="aboutText">{{ $t('about_text1')}}</p>
+            <p class="aboutText">{{ $t('about_text2')}}</p>
+            <p class="aboutText">{{ $t('about_text3')}}</p>
+             <p class="aboutText">{{ $t('about_text4')}}</p>
+          </div>
+        </div>
+        
+      </div>
     </div>
     <div class="designContainer">
       <Navbar />
     </div>
     
     <div class="motionDesignContainer">
+      <h2>Motion design</h2>
       <Navbar />
     </div>
     
@@ -34,6 +52,12 @@
 </template>
 <style scoped>
     @import url(assets/style.css);
+    /*.motionDesignContainer > .navbar{
+      
+    }*/
+    .navbar{
+      color: #806857;
+    }
 </style>
 <style module>
   @import url(assets/style.css);

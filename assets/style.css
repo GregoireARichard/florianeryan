@@ -10,6 +10,7 @@
     --fontColor2 : #A5836A;
     --fontColor3: #855C2C;
     --fontColor4: #9F7645;
+    --fontColor5: #806857;
 }
 @font-face {
     font-family: Quicksand;
@@ -28,6 +29,13 @@ body{
     margin: 0;
     overflow-x: hidden;
     background-color: var(--mainColor);
+}
+h2{
+  font-family: 'Casta', sans-serif;
+  color: var(--fontColor2);
+}
+p{
+  font-family: 'Quicksand', sans-serif;
 }
 .titlesContainer{
   height:300px;
@@ -87,4 +95,37 @@ div[class$="Container"]{
 a{
   text-decoration: none;
   font-family: Casta, 'sans-serif';
+}
+.navbar{
+  width: 400px;
+  margin: 0 auto;
+}
+.aboutmeTitleContainer{
+  width:40vw;
+  max-height:5vh;
+  margin: 0 auto 0  30vw;
+}
+.aboutmeTitle{
+  font-size: 60px;
+}
+.aboutImgContainer{
+  width: 30vw;
+  margin-left: 10vw;
+}
+.aboutmeImg{
+  width:75%;
+}
+.aboutmeFlexContainer{
+  max-width: 80vw;
+  max-height:30vh;
+  margin: 0 auto;
+  display: flex;
+}
+.aboutTextContainer{
+  max-width: 35vw;
+  margin: 5vh 5vw 0 0;
+}
+.aboutText{
+  color: var(--fontColor2);
+  font-size: 22px;
 }
