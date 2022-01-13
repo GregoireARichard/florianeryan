@@ -37,11 +37,52 @@
     </div>
     <div class="designContainer">
       <Navbar />
+      <div class="designSubContainer">
+        <div class="designFlexLeft">
+          <div class="designTitleContainer">
+            <h2 class="designTitle">{{ $t('navbar_des')}}</h2>
+          </div>
+          <div class="designCarouselContainer">
+            <img :src="require('../assets/img/synerg.png')" alt="synerghetic" class="synergImg">
+          </div>
+        </div>
+        <div class="designFlexRight">
+          <div class="projectDesignTitleContainer">
+            <h3 class="projectDesignTitle"> Synerg'Hetic </h3>
+          </div>
+          <p class="projectDesignText">
+            {{ $t('synerg_text')}} <br>
+            {{ $t('synerg_text2')}}
+          </p>
+
+          <img :src="require('../assets/img/whitearrow.png')" alt="whiteArrow" class="whiteArrow">
+        </div>
+      </div>
+
     </div>
     
     <div class="motionDesignContainer">
-      <h2>Motion design</h2>
       <Navbar />
+      <div class="designSubContainer">
+        <div class="designFlexLeft flexLeftMotion">
+          <div class="projectDesignTitleContainer">
+            <h3 class="projectDesignTitle"> Blossoming agency </h3>
+          </div>
+          <p class="projectDesignText">
+            {{ $t('blossom_text')}} <br>
+          </p>
+
+          <img :src="require('../assets/img/brownarrow.png')" alt="whiteArrow" class="whiteArrow">
+        </div>
+        <div class="designFlexRight">
+          <div class="designTitleContainer motionTitleContainer">
+            <h2 class="designTitle">{{ $t('navbar_motion')}}</h2>
+          </div>
+          <div class="designCarouselContainer">
+            <img :src="require('../assets/img/thumbnail.png')" alt="synerghetic" class="synergImg">
+          </div>
+        </div>
+      </div>
     </div>
     
     <div class="contactContainer">

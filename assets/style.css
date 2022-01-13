@@ -30,7 +30,7 @@ body{
     overflow-x: hidden;
     background-color: var(--mainColor);
 }
-h2{
+h2,h3{
   font-family: 'Casta', sans-serif;
   color: var(--fontColor2);
 }
@@ -97,16 +97,19 @@ a{
   font-family: Casta, 'sans-serif';
 }
 .navbar{
-  width: 400px;
+  width: 480px;
   margin: 0 auto;
 }
 .aboutmeTitleContainer{
   width:40vw;
   max-height:5vh;
   margin: 0 auto 0  30vw;
+  position: relative;
+  left:5%;
+  top:13%;
 }
 .aboutmeTitle{
-  font-size: 60px;
+  font-size: 9vh;
 }
 .aboutImgContainer{
   width: 30vw;
@@ -127,5 +130,54 @@ a{
 }
 .aboutText{
   color: var(--fontColor2);
-  font-size: 22px;
+  font-size: 1.5vw;
+}
+.designSubContainer{
+  width: 80vw;
+  max-height: 50vh;
+  margin: 0 auto;
+  display: flex;
+  justify-content: space-evenly;
+}
+
+.designTitleContainer{
+  max-height:8vh;
+  width:30vw;
+}
+.designTitle{
+  font-size: 2.5vw;
+}
+.designFlexRight, .designFlexLeft{
+  width: 35vw;
+  max-height: 40vh;
+}
+.designFlexRight{
+  margin-top: 50px;
+  transform: translateX(-7vw);
+}
+.designCarouselContainer{
+  max-height:30vh;
+}
+.synergImg{
+  width: 35%;
+}
+.projectDesignTitleContainer{
+  max-height:3vh;
+  font-size: 1.77vw;
+}
+
+.projectDesignText{
+  color: var(--fontColor1);
+  font-size: 1.3vw;
+}
+.whiteArrow{
+  width:15%;
+  cursor: pointer;
+}
+.motionTitleContainer{
+  max-width: 35vw;
+  text-align: right;
+}
+.flexLeftMotion{
+  margin-top:105px;
 }

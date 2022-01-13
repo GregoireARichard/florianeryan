@@ -9,6 +9,7 @@
 <style scoped>
     .navbarLink{
         color : #fff;
+        padding : 0 10px;
     }
     .motionDesignContainer > .navbar > .navbarLink, .contactContainer > .navbar > .navbarLink{
         color: #806857;
