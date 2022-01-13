@@ -56,7 +56,8 @@ export default {
           synerg_text : 'This junior company asked me to complete a christmas card for their clients in 2020.',
           synerg_text2 : 'They wanted a magical winter scene!',
           blossom_text : 'I created a logo animation for a fictional communication agency.The petal animation is hand-drawn!',
-          contact_me : 'Feel free to contact me here!',
+          contact_me : 'Contact me',
+          contact_me_text : 'Feel free to contact me here!',
         },
         fr: {
           navbar_des : 'Design / Graphisme',
@@ -70,7 +71,8 @@ export default {
           synerg_text : 'Cette jeune entreprise m\'a demandé de compléter une carte de Noël pour leur clients de 2020.',
           synerg_text2 : 'Ils voulaient une scène de Noël magique !',
           blossom_text : 'J\'ai créé une animation de logo pour une agence de communication fictive. L\'animation de la pétale est faite à la main !',
-          contact_me : 'Vous pouvez me contacter à tout moment ici !',
+          contact_me : 'Contactez moi',
+          contact_me_text : 'Vous pouvez me contacter à tout moment ici !',
         },
         
       }

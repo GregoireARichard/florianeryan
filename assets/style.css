@@ -181,3 +181,40 @@ a{
 .flexLeftMotion{
   margin-top:105px;
 }
+
+.contactTitleContainer{
+  max-height:5vh;
+  width: 20vw;
+  font-size:2vw;
+  text-align: center;
+  transform: translate(-200px,190px);
+}
+.contactPolygon{
+  width: 30vw;
+  height:10vw;
+  margin: 30vh auto 0 auto;
+}
+.rountPart, .squarePart{
+  width: 30vw;
+  height:5vw;
+  background: var(--mainColor);
+  text-align: center;
+}
+.rountPart{
+  border-radius: 30px;
+}
+.squarePart{
+  transform: translateY(-40px);
+}
+.contactme{
+  color:var(--fontColor1);
+  padding-top: 10px;
+  font-size: 12px;
+}
+.mailAdress{
+  font-family: 'Casta', sans-serif;
+}
+.icons{
+  width: 5%;
+  padding-right: 5px;
+}

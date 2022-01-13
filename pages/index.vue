@@ -87,6 +87,20 @@
     
     <div class="contactContainer">
       <Navbar />
+      <div class="contactTitleContainer">
+        <h3 class="contactTitle"> {{ $t('contact_me')}} </h3>
+      </div>
+      <div class="contactPolygon">
+        <div class="rountPart">
+          <p class="contactme"> {{ $t('contact_me_text')}}</p>
+          
+        </div>
+        <div class="squarePart">
+          <p class="mailAdress">florianeryan [at] gmail.com</p>
+          <a href="#" class="social"> <img :src="require('../assets/img/linkedin.png')" alt="linkedin" class="icons"> </a>
+          <a href="#" class="social"> <img :src="require('../assets/img/insta.png')" alt="instagram" class="icons"> </a>
+        </div>
+      </div>
     </div>
 
   </div>
