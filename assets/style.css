@@ -27,6 +27,7 @@
 
 html {
   scroll-behavior: smooth;
+  overflow-x     : hidden;
 }
 
 body {
@@ -46,15 +47,50 @@ p {
 }
 
 div[class$="Container"] {
-  width   : 100vw;
-  height  : 100vh;
-  /*border:1px solid black; dev */
+  width : 100vw;
+  height: 100vh;
+}
+
+/*=====Conditions for ONLY computer screen=====*/
+@media screen and (min-width:992px) {
+
+  #Fond_rond:hover,
+  #mainTitle:hover~#svgAccueil #Fond_rond,
+  #name:hover~#svgAccueil #Fond_rond,
+  .fondRondIsHover {
+    transform-origin: center;
+    transform       : scaleX(1.11) translate(0, 51px);
+  }
+
+  #Fond_rond:hover~#vagueAccueil1,
+  #Fond_rond:hover~#vagueAccueil2,
+  #Fond_rond:hover~#vagueAccueil3,
+  #mainTitle:hover~#svgAccueil #vagueAccueil1,
+  #mainTitle:hover~#svgAccueil #vagueAccueil2,
+  #mainTitle:hover~#svgAccueil #vagueAccueil3,
+  #name:hover~#svgAccueil #vagueAccueil1,
+  #name:hover~#svgAccueil #vagueAccueil2,
+  #name:hover~#svgAccueil #vagueAccueil3,
+  #vagueAccueil1:hover,
+  #vagueAccueil1:hover~#vagueAccueil2,
+  #vagueAccueil1:hover~#vagueAccueil3,
+  #vagueAccueil2:hover,
+  #vagueAccueil2:hover~#vagueAccueil3,
+  #vagueAccueil3:hover,
+  .vagueIsHover {
+    transform-origin: center;
+    transform       : scale(1.11, 1.4) translate(0, -105px);
+  }
+}
+
+.fullPotentialParent {
+  display   : none;
+  text-align: center;
 }
 
 .titlesContainer {
   height         : 100vh;
   width          : 65vw;
-  /* margin      : 20vh auto 0 auto; */
   text-align     : center;
   color          : var(--fontColor3);
   line-height    : 10px;
@@ -62,6 +98,7 @@ div[class$="Container"] {
   flex-direction : column;
   align-items    : center;
   justify-content: center;
+  position       : relative;
 }
 
 .titlesContainer>* {
@@ -69,20 +106,26 @@ div[class$="Container"] {
   z-index : 10;
 }
 
+/*====SVG animation in the mediaqueries line 54=====*/
 #svgAccueil {
-  z-index : 0;
-  position: absolute;
-  width   : 50%;
-  top     : 7%;
-  left    : 28%;
+  z-index  : 0;
+  position : absolute;
+  width    : 100vw;
+  top      : 50%;
+  left     : 50%;
+  transform: translate(-48%, -57%);
+}
+
+#svgAccueil * {
+  transition      : all 0.7s;
+  transform-origin: center;
 }
 
 .mainTitle {
   text-transform: uppercase;
   font-size     : 8rem;
   font-weight   : 100;
-  margin        : 0;
-  margin-bottom : 8%;
+  margin        : 100px 0;
   width         : fit-content;
 }
 
@@ -96,7 +139,7 @@ div[class$="Container"] {
 }
 
 .header {
-  height     : 90vh;
+  height     : 85vh;
   width      : 100vw;
   font-family: 'Casta', sans-serif;
   font-weight: 400;
@@ -111,17 +154,17 @@ div.arrowContainer {
 }
 
 .arrowContainer a {
-  padding: 325% 0 0 0;
-  
+  margin: 25vh 0 0 0;
 }
 
 .arrow {
   cursor: pointer;
+  height: 8vh;
 }
 
 .arrow:hover {
   animation-name           : floating;
-  animation-duration       : 2s;
+  animation-duration       : 1.5s;
   animation-iteration-count: infinite;
   animation-timing-function: ease-in-out;
 }
@@ -138,6 +181,22 @@ div.arrowContainer {
   100% {
     transform: translate(0, 0px);
   }
+}
+
+.divier1Parent {
+  position   : absolute;
+  top        : 0;
+  left       : 0;
+  width      : 100%;
+  overflow   : hidden;
+  line-height: 0;
+}
+
+#divider1 {
+  position: relative;
+  display : block;
+  width   : calc(100% + 1.3px);
+  height  : fit-content;
 }
 
 .menuContainer {
@@ -232,6 +291,7 @@ a {
 
 .designCarouselContainer {
   max-height: 30vh;
+  width     : fit-content;
 }
 
 .synergImg {
@@ -305,4 +365,90 @@ a {
 .icons {
   width        : 5%;
   padding-right: 5px;
+}
+
+@media screen and (max-width:992px) {
+  .header {
+    height: 90vh;
+  }
+
+  .fullPotentialParent {
+    display        : flex;
+    position       : absolute;
+    justify-content: center;
+    width          : 100vw;
+  }
+
+  .fullPotentialText {
+    color      : var(--fontColor1);
+    font-weight: 1000;
+    font-size  : 1rem;
+  }
+
+  #svgAccueil {
+    width    : 55vw;
+    transform: translate(-43%, -50%);
+  }
+
+  .mainTitle {
+    font-size: 6rem;
+    margin   : 12% 0;
+  }
+
+  .name {
+    font-size: 7rem;
+  }
+
+  .navbar {
+    max-width: 100vw;
+  }
+
+  .aboutmeTitleContainer {
+    max-width: 10vw;
+    left     : 0;
+  }
+
+}
+
+@media screen and (max-width:767px) {
+
+  .header {
+    height: 93vh;
+  }
+
+
+  #svgAccueil {
+    width    : 75vw;
+    transform: translate(-43%, -50%);
+  }
+
+  .mainTitle {
+    font-size: 5rem;
+    margin   : 50% 0 12% 0;
+  }
+
+  .name {
+    font-size  : 5rem;
+    line-height: 80%;
+  }
+
+  .arrowContainer a {
+    margin: 15vh 0 0 0;
+  }
+}
+
+@media screen and (max-width:320px) {
+
+  #svgAccueil {
+    width    : 70vw;
+    transform: translate(-42%, -50%);
+  }
+
+  .mainTitle {
+    font-size: 3rem;
+  }
+
+  .name {
+    font-size: 3rem;
+  }
 }

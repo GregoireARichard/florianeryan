@@ -58,6 +58,7 @@ export default {
           blossom_text : 'I created a logo animation for a fictional communication agency.The petal animation is hand-drawn!',
           contact_me : 'Contact me',
           contact_me_text : 'Feel free to contact me here!',
+          full_potential : 'This website show its full potential on a computer !',
         },
         fr: {
           navbar_des : 'Design / Graphisme',
@@ -73,6 +74,7 @@ export default {
           blossom_text : 'J\'ai créé une animation de logo pour une agence de communication fictive. L\'animation de la pétale est faite à la main !',
           contact_me : 'Contactez moi',
           contact_me_text : 'Vous pouvez me contacter à tout moment ici !',
+          full_potential : 'Ce site dévoile tout son potentiel sur un ordinateur !',
         },
         
       }

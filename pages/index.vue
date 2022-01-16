@@ -1,86 +1,89 @@
 <template>
   <div>
+    <div class="fullPotentialParent">
+      <p class="fullPotentialText">{{ $t("full_potential") }}</p>
+    </div>
     <div class="header">
-      <svg
-        id="svgAccueil"
-        data-name="svgAccueil"
-        xmlns="http://www.w3.org/2000/svg"
-        xmlns:xlink="http://www.w3.org/1999/xlink"
-        width="518"
-        height="733"
-        viewBox="0 0 518 733"
-      >
-        <defs>
-          <linearGradient
-            id="linear-gradient"
-            x1="0.5"
-            x2="0.5"
-            y2="1"
-            gradientUnits="objectBoundingBox"
-          >
-            <stop offset="0" stop-color="#ffe1ca" />
-            <stop offset="1" stop-color="#f6dcc7" />
-          </linearGradient>
-          <linearGradient
-            id="linear-gradient-2"
-            x1="0.5"
-            x2="0.5"
-            y2="1"
-            gradientUnits="objectBoundingBox"
-          >
-            <stop offset="0" stop-color="#f0d2bc" />
-            <stop offset="1" stop-color="#f0d2bc" />
-          </linearGradient>
-        </defs>
-        <rect
-          id="Rectangle_1"
-          data-name="Rectangle 1"
-          width="214"
-          height="661"
-          transform="translate(303 19)"
-          fill="none"
-          stroke="#472c0c"
-          stroke-width="2"
-        />
-        <rect
-          id="Rectangle_2"
-          data-name="Rectangle 2"
-          width="214"
-          height="661"
-          transform="translate(275 1)"
-          fill="none"
-          stroke="#bb996f"
-          stroke-width="2"
-        />
-        <path
-          id="Fond_rond"
-          data-name="Fond rond"
-          d="M0,222.5C0,99.617,99.617,0,222.5,0h0C345.383,0,445,99.617,445,222.5V682H0Z"
-          transform="translate(0 51)"
-          fill="url(#linear-gradient)"
-        />
-        <path
-          id="Tracé_1"
-          data-name="Tracé 1"
-          d="M0,733H445V552.5S340.512,510.719,281,532c-79.275,28.347-118.5,95-222.5,82.5C17.664,609.592,0,733,0,733Z"
-          fill="url(#linear-gradient-2)"
-        />
-        <path
-          id="Tracé_2"
-          data-name="Tracé 2"
-          d="M445,733H0V523s80.988,75.719,140.5,97c79.275,28.348,161.2-10.348,241,16.5C420.483,649.616,445,733,445,733Z"
-          fill="#fce1cd"
-        />
-        <path
-          id="Tracé_3"
-          data-name="Tracé 3"
-          d="M0,733H445V591s-75.988,67.219-135.5,88.5c-79.275,28.348-135.705-20.848-215.5,6C55.017,698.616,0,733,0,733Z"
-          fill="#ffe7d5"
-        />
-      </svg>
       <div class="titlesContainer">
-        <h1 class="mainTitle">Portfolio</h1>
-        <h2 class="name">Floriane Ryan</h2>
+        <h1 class="mainTitle" id="mainTitle">Portfolio</h1>
+        <h2 class="name" id="name">Floriane Ryan</h2>
+        <svg
+          id="svgAccueil"
+          data-name="svgAccueil"
+          xmlns="http://www.w3.org/2000/svg"
+          xmlns:xlink="http://www.w3.org/1999/xlink"
+          width="518"
+          height="733"
+          viewBox="0 0 518 733"
+        >
+          <defs>
+            <linearGradient
+              id="linear-gradient"
+              x1="0.5"
+              x2="0.5"
+              y2="1"
+              gradientUnits="objectBoundingBox"
+            >
+              <stop offset="0" stop-color="#ffe1ca" />
+              <stop offset="1" stop-color="#f6dcc7" />
+            </linearGradient>
+            <linearGradient
+              id="linear-gradient-2"
+              x1="0.5"
+              x2="0.5"
+              y2="1"
+              gradientUnits="objectBoundingBox"
+            >
+              <stop offset="0" stop-color="#f0d2bc" />
+              <stop offset="1" stop-color="#f0d2bc" />
+            </linearGradient>
+          </defs>
+          <rect
+            id="Rectangle_1"
+            data-name="Rectangle 1"
+            width="214"
+            height="661"
+            transform="translate(303 19)"
+            fill="none"
+            stroke="#472c0c"
+            stroke-width="2"
+          />
+          <rect
+            id="Rectangle_2"
+            data-name="Rectangle 2"
+            width="214"
+            height="661"
+            transform="translate(275 1)"
+            fill="none"
+            stroke="#bb996f"
+            stroke-width="2"
+          />
+          <path
+            id="Fond_rond"
+            data-name="Fond rond"
+            d="M0,222.5C0,99.617,99.617,0,222.5,0h0C345.383,0,445,99.617,445,222.5V682H0Z"
+            transform="translate(0 51)"
+            fill="url(#linear-gradient)"
+          />
+          <path
+            id="vagueAccueil1"
+            data-name="Vague Accueil 1"
+            d="M0,733H445V552.5S340.512,510.719,281,532c-79.275,28.347-118.5,95-222.5,82.5C17.664,609.592,0,733,0,733Z"
+            fill="url(#linear-gradient-2)"
+          />
+          <path
+            id="vagueAccueil2"
+            data-name="Vague Accueil 2"
+            d="M445,733H0V523s80.988,75.719,140.5,97c79.275,28.348,161.2-10.348,241,16.5C420.483,649.616,445,733,445,733Z"
+            fill="#fce1cd"
+          />
+          <path
+            id="vagueAccueil3"
+            data-name="Vague Accueil 3"
+            d="M0,733H445V591s-75.988,67.219-135.5,88.5c-79.275,28.348-135.705-20.848-215.5,6C55.017,698.616,0,733,0,733Z"
+            fill="#ffe7d5"
+          />
+        </svg>
         <div class="arrowContainer">
           <a href="#menu">
             <svg
@@ -90,11 +93,7 @@
               viewBox="0 0 94.977 348.595"
               class="arrow"
             >
-              <g
-                id="arrow"
-                data-name="Arrow"
-                transform="translate(-1.876)"
-              >
+              <g id="arrow" data-name="Arrow" transform="translate(-1.876)">
                 <path
                   id="Tracé_4"
                   data-name="Tracé 4"
@@ -117,6 +116,21 @@
         </div>
       </div>
     </div>
+    <div class="divider1Parent">
+      <svg
+        xmlns="http://www.w3.org/2000/svg"
+        width="1920"
+        height="173.582"
+        viewBox="0 0 1920 173.582"
+        id="divider1"
+      >
+        <path
+          d="M0,111.967l221.284,14.576L450.518,79.5l575.735,94.079,488.282-61.615L1920,0V173.582H0Z"
+          fill="#ffede0"
+        />
+      </svg>
+    </div>
+
     <div class="menuContainer" id="menu">
       <!-- tree stuff-->
     </div>
@@ -251,5 +265,70 @@
 </style>
 
 <script>
-export default {};
+export default {
+  mounted: function () {
+    if (window.outerWidth >= 992) {
+      //Hover on homepage's svg
+      document
+        .getElementById("vagueAccueil1")
+        .addEventListener("mouseover", function () {
+          document.getElementById("Fond_rond").classList.add("fondRondIsHover");
+        });
+
+      document
+        .getElementById("vagueAccueil1")
+        .addEventListener("mouseleave", function () {
+          document
+            .getElementById("Fond_rond")
+            .classList.remove("fondRondIsHover");
+        });
+
+      document
+        .getElementById("vagueAccueil2")
+        .addEventListener("mouseover", function () {
+          document
+            .getElementById("vagueAccueil1")
+            .classList.add("vagueIsHover");
+          document.getElementById("Fond_rond").classList.add("fondRondIsHover");
+        });
+
+      document
+        .getElementById("vagueAccueil2")
+        .addEventListener("mouseleave", function () {
+          document
+            .getElementById("vagueAccueil1")
+            .classList.remove("vagueIsHover");
+          document
+            .getElementById("Fond_rond")
+            .classList.remove("fondRondIsHover");
+        });
+
+      document
+        .getElementById("vagueAccueil3")
+        .addEventListener("mouseover", function () {
+          document
+            .getElementById("vagueAccueil1")
+            .classList.add("vagueIsHover");
+          document
+            .getElementById("vagueAccueil2")
+            .classList.add("vagueIsHover");
+          document.getElementById("Fond_rond").classList.add("fondRondIsHover");
+        });
+
+      document
+        .getElementById("vagueAccueil3")
+        .addEventListener("mouseleave", function () {
+          document
+            .getElementById("vagueAccueil1")
+            .classList.remove("vagueIsHover");
+          document
+            .getElementById("vagueAccueil2")
+            .classList.remove("vagueIsHover");
+          document
+            .getElementById("Fond_rond")
+            .classList.remove("fondRondIsHover");
+        });
+    }
+  },
+};
 </script>
