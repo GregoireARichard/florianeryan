@@ -224,23 +224,25 @@
             d="M278 349L289 328L294 511.5L278 569.5V349Z"
             fill="url(#paint7_linear_132_57)"
           />
-          <g filter="url(#filter0_bd_132_57)" id="treeCircle1">
+          <a href="#designContainer">
+            <g filter="url(#filter0_bd_132_57)" id="treeCircle1">
+              <circle
+                cx="565.5"
+                cy="123.5"
+                r="29.5"
+                fill="url(#paint8_linear_132_57)"
+                shape-rendering="crispEdges"
+              />
+            </g>
             <circle
+              id="treeShadowCircle1"
               cx="565.5"
               cy="123.5"
-              r="29.5"
-              fill="url(#paint8_linear_132_57)"
-              shape-rendering="crispEdges"
+              r="28.5"
+              stroke="url(#paint9_linear_132_57)"
+              stroke-width="2"
             />
-          </g>
-          <circle
-            id="treeShadowCircle1"
-            cx="565.5"
-            cy="123.5"
-            r="28.5"
-            stroke="url(#paint9_linear_132_57)"
-            stroke-width="2"
-          />
+          </a>
           <a href="#motionDesignContainer">
             <g filter="url(#filter1_bd_132_57)" id="treeCircle2">
               <circle
@@ -260,39 +262,43 @@
               stroke-width="2"
             />
           </a>
-          <g filter="url(#filter2_bd_132_57)" id="treeCircle3">
-            <ellipse
-              cx="231.5"
-              cy="296"
-              rx="12.5"
-              ry="17"
-              fill="url(#paint12_linear_132_57)"
-              shape-rendering="crispEdges"
+          <a href="#contactContainer">
+            <g filter="url(#filter2_bd_132_57)" id="treeCircle3">
+              <ellipse
+                cx="231.5"
+                cy="296"
+                rx="12.5"
+                ry="17"
+                fill="url(#paint12_linear_132_57)"
+                shape-rendering="crispEdges"
+              />
+            </g>
+            <path
+              d="M243 296C243 300.504 241.656 304.541 239.533 307.428C237.41 310.316 234.558 312 231.5 312C228.442 312 225.59 310.316 223.467 307.428C221.344 304.541 220 300.504 220 296C220 291.496 221.344 287.459 223.467 284.572C225.59 281.684 228.442 280 231.5 280C234.558 280 237.41 281.684 239.533 284.572C241.656 287.459 243 291.496 243 296Z"
+              stroke="url(#paint13_linear_132_57)"
+              stroke-width="2"
+              id="treeShadowCircle3"
             />
-          </g>
-          <path
-            d="M243 296C243 300.504 241.656 304.541 239.533 307.428C237.41 310.316 234.558 312 231.5 312C228.442 312 225.59 310.316 223.467 307.428C221.344 304.541 220 300.504 220 296C220 291.496 221.344 287.459 223.467 284.572C225.59 281.684 228.442 280 231.5 280C234.558 280 237.41 281.684 239.533 284.572C241.656 287.459 243 291.496 243 296Z"
-            stroke="url(#paint13_linear_132_57)"
-            stroke-width="2"
-            id="treeShadowCircle3"
-          />
-          <g filter="url(#filter3_bd_132_57)" id="treeCricle4">
+          </a>
+          <a href="#aboutContainer">
+            <g filter="url(#filter3_bd_132_57)" id="treeCircle4">
+              <circle
+                cx="189"
+                cy="61"
+                r="55"
+                fill="url(#paint14_linear_132_57)"
+                shape-rendering="crispEdges"
+              />
+            </g>
             <circle
+              id="treeShadowCircle4"
               cx="189"
               cy="61"
-              r="55"
-              fill="url(#paint14_linear_132_57)"
-              shape-rendering="crispEdges"
+              r="54"
+              stroke="url(#paint15_linear_132_57)"
+              stroke-width="2"
             />
-          </g>
-          <circle
-            id="treeShadowCircle4"
-            cx="189"
-            cy="61"
-            r="54"
-            stroke="url(#paint15_linear_132_57)"
-            stroke-width="2"
-          />
+          </a>
           <defs>
             <filter
               id="filter0_bd_132_57"
@@ -846,6 +852,7 @@ export default {
         });
 
       //Hover on Tree Menu
+      //Motion Design Link
       document
         .getElementById("treeCircle2")
         .addEventListener("mouseover", function () {
@@ -888,6 +895,139 @@ export default {
             .getElementById("treeShadowCircle2")
             .classList.remove("treeCircleIsHover");
         });
+
+      //Design Link
+      document
+        .getElementById("treeCircle1")
+        .addEventListener("mouseover", function () {
+          document
+            .getElementById("treeMenuText2")
+            .classList.add("treeTextIsHover");
+          document
+            .getElementById("treeCircle1")
+            .classList.add("treeCircle1IsHover");
+        });
+
+      document
+        .getElementById("treeCircle1")
+        .addEventListener("mouseleave", function () {
+          document
+            .getElementById("treeMenuText2")
+            .classList.remove("treeTextIsHover");
+          document
+            .getElementById("treeCircle1")
+            .classList.remove("treeCircle1IsHover");
+        });
+
+      document
+        .getElementById("treeMenuText2")
+        .addEventListener("mouseover", function () {
+          document
+            .getElementById("treeCircle1")
+            .classList.add("treeCircle1IsHover");
+          document
+            .getElementById("treeShadowCircle1")
+            .classList.add("treeCircle1IsHover");
+        });
+      document
+        .getElementById("treeMenuText2")
+        .addEventListener("mouseleave", function () {
+          document
+            .getElementById("treeCircle1")
+            .classList.remove("treeCircle1IsHover");
+          document
+            .getElementById("treeShadowCircle1")
+            .classList.remove("treeCircle1IsHover");
+        });
+
+      //About me
+      document
+        .getElementById("treeCircle4")
+        .addEventListener("mouseover", function () {
+          document
+            .getElementById("treeMenuText3")
+            .classList.add("treeTextIsHover");
+          document
+            .getElementById("treeCircle4")
+            .classList.add("treeCircleIsHover");
+        });
+
+      document
+        .getElementById("treeCircle4")
+        .addEventListener("mouseleave", function () {
+          document
+            .getElementById("treeMenuText3")
+            .classList.remove("treeTextIsHover");
+          document
+            .getElementById("treeCircle4")
+            .classList.remove("treeCircleIsHover");
+        });
+
+      document
+        .getElementById("treeMenuText3")
+        .addEventListener("mouseover", function () {
+          document
+            .getElementById("treeCircle4")
+            .classList.add("treeCircleIsHover");
+          document
+            .getElementById("treeShadowCircle4")
+            .classList.add("treeCircleIsHover");
+        });
+      document
+        .getElementById("treeMenuText3")
+        .addEventListener("mouseleave", function () {
+          document
+            .getElementById("treeCircle4")
+            .classList.remove("treeCircleIsHover");
+          document
+            .getElementById("treeShadowCircle4")
+            .classList.remove("treeCircleIsHover");
+        });
+
+      //Contact
+      document
+        .getElementById("treeCircle3")
+        .addEventListener("mouseover", function () {
+          document
+            .getElementById("treeMenuText4")
+            .classList.add("treeTextIsHover");
+          document
+            .getElementById("treeCircle3")
+            .classList.add("treeCircleIsHover");
+        });
+
+      document
+        .getElementById("treeCircle3")
+        .addEventListener("mouseleave", function () {
+          document
+            .getElementById("treeMenuText4")
+            .classList.remove("treeTextIsHover");
+          document
+            .getElementById("treeCircle3")
+            .classList.remove("treeCircleIsHover");
+        });
+
+      document
+        .getElementById("treeMenuText4")
+        .addEventListener("mouseover", function () {
+          document
+            .getElementById("treeCircle3")
+            .classList.add("treeCircleIsHover");
+          document
+            .getElementById("treeShadowCircle3")
+            .classList.add("treeCircleIsHover");
+        });
+      document
+        .getElementById("treeMenuText4")
+        .addEventListener("mouseleave", function () {
+          document
+            .getElementById("treeCircle3")
+            .classList.remove("treeCircleIsHover");
+          document
+            .getElementById("treeShadowCircle3")
+            .classList.remove("treeCircleIsHover");
+        });
+
     }
   },
 };

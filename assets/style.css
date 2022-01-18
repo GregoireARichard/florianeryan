@@ -235,7 +235,7 @@ div.menuContainer {
   left: 415px;
 }
 
-*[id*='treeCircle'], *[id*='treeShadowCircle']{
+*[id*='treeCircle'], *[id*='treeShadowCircle'], #treeCircle4{
   transition: all 0.7s;
 }
 
@@ -245,6 +245,10 @@ div.menuContainer {
 
 .treeCircleIsHover{
   transform: translateX(20px);
+}
+
+#treeCircle1.treeCircle1IsHover, #treeShadowCircle1.treeCircle1IsHover{
+  transform: translateX(10px);
 }
 
 #treeMenuText1:hover, #treeCircle2:hover, #treeCircle2:hover + #treeShadowCircle2{
@@ -273,18 +277,19 @@ div.menuContainer {
   left: 275px;
 }
 
-#treeMenuText1:hover, #treeCircle2:hover, #treeCircle2:hover + #treeShadowCircle2{
+#treeMenuText3:hover, #treeCircle4:hover, #treeCircle4:hover + #treeShadowCircle4{
   transform: translateX(20px);
 }
 
 #treeMenuText4{
   top: 364px;
-  left: 70px;
+  left: 60px;
 }
 
-#treeMenuText1:hover, #treeCircle2:hover, #treeCircle2:hover + #treeShadowCircle2{
+#treeMenuText4:hover, #treeCircle3:hover, #treeCircle3:hover + #treeShadowCircle3{
   transform: translateX(20px);
 }
+
 
 .designContainer {
   background-color: var(--backColor4);
