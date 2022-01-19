@@ -990,10 +990,10 @@ export default {
         .addEventListener("mouseover", function () {
           document
             .getElementById("treeMenuText4")
-            .classList.add("treeTextIsHover");
+            .classList.add("treeTextIs4Hover");
           document
             .getElementById("treeCircle3")
-            .classList.add("treeCircleIsHover");
+            .classList.add("treeCircleIs3Hover");
         });
 
       document
@@ -1001,10 +1001,10 @@ export default {
         .addEventListener("mouseleave", function () {
           document
             .getElementById("treeMenuText4")
-            .classList.remove("treeTextIsHover");
+            .classList.remove("treeTextIs4Hover");
           document
             .getElementById("treeCircle3")
-            .classList.remove("treeCircleIsHover");
+            .classList.remove("treeCircleIs3Hover");
         });
 
       document
@@ -1012,20 +1012,20 @@ export default {
         .addEventListener("mouseover", function () {
           document
             .getElementById("treeCircle3")
-            .classList.add("treeCircleIsHover");
+            .classList.add("treeCircleIs3Hover");
           document
             .getElementById("treeShadowCircle3")
-            .classList.add("treeCircleIsHover");
+            .classList.add("treeCircleIs3Hover");
         });
       document
         .getElementById("treeMenuText4")
         .addEventListener("mouseleave", function () {
           document
             .getElementById("treeCircle3")
-            .classList.remove("treeCircleIsHover");
+            .classList.remove("treeCircleIs3Hover");
           document
             .getElementById("treeShadowCircle3")
-            .classList.remove("treeCircleIsHover");
+            .classList.remove("treeCircleIs3Hover");
         });
 
     }
