@@ -681,7 +681,6 @@
       </div>
     </div>
     <div class="designContainer" id="designContainer">
-      <Navbar />
       <div class="designSubContainer">
         <div class="designFlexLeft">
           <div class="designTitleContainer">
@@ -714,7 +713,6 @@
     </div>
 
     <div class="motionDesignContainer" id="motionDesignContainer">
-      <Navbar />
       <div class="designSubContainer">
         <div class="designFlexLeft flexLeftMotion">
           <div class="projectDesignTitleContainer">
@@ -744,7 +742,6 @@
     </div>
 
     <div class="contactContainer" id="contactContainer">
-      <Navbar />
       <div class="contactTitleContainer">
         <h3 class="contactTitle">{{ $t("contact_me") }}</h3>
       </div>
@@ -1027,8 +1024,30 @@ export default {
             .getElementById("treeShadowCircle3")
             .classList.remove("treeCircleIs3Hover");
         });
-
     }
+
+    //Sticky menu
+    var positionSticky =
+      document.getElementById("aboutContainer").offsetTop - 30;
+
+    window.onscroll = function () {
+      var currentPosition = window.pageYOffset;
+
+      if (
+        document.getElementById("aboutContainer").getBoundingClientRect().top - document.getElementById("aboutContainer").offsetHeight <
+        -100
+      ) {
+        document.getElementById("navbar").classList.add("isVisible");
+      } else {
+        document.getElementById("navbar").classList.remove("isVisible");
+      }
+
+      if (currentPosition > positionSticky) {
+        document.getElementById("navbar").classList.add("isSticky");
+      } else {
+        document.getElementById("navbar").classList.remove("isSticky");
+      }
+    };
   },
 };
 </script>

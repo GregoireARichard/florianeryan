@@ -307,6 +307,38 @@ div.menuContainer {
   left: 60px;
 }
 
+a {
+  text-decoration: none;
+  font-family    : Casta, 'sans-serif';
+}
+
+.navbar {
+  position: absolute;
+  top: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  margin: 0 auto;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: fit-content;
+  z-index: 1000;
+  opacity: 0;
+  transition: opacity 0.5s;
+}
+
+.isSticky{
+  position: fixed;
+  top: 30px;
+}
+
+.isVisible{
+  opacity: 1;
+}
+
+.aboutContainer{
+  position: relative;
+}
 
 .designContainer {
   background-color: var(--backColor4);
@@ -317,15 +349,6 @@ div.menuContainer {
   background-color: var(--backColor3);
 }
 
-a {
-  text-decoration: none;
-  font-family    : Casta, 'sans-serif';
-}
-
-.navbar {
-  width : 480px;
-  margin: 0 auto;
-}
 
 .aboutmeTitleContainer {
   width     : 40vw;
