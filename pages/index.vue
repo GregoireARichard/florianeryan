@@ -681,6 +681,19 @@
       </div>
     </div>
     <div class="designContainer" id="designContainer">
+      <svg
+        width="1440"
+        height="129"
+        viewBox="0 0 1440 129"
+        fill="none"
+        xmlns="http://www.w3.org/2000/svg"
+        id="divider2"
+      >
+        <path
+          d="M167 93L0 82V0H1440L1143 82L774.5 128.5L340 57.5L167 93Z"
+          fill="#E3C7B2"
+        />
+      </svg>
       <div class="designSubContainer">
         <div class="designFlexLeft">
           <div class="designTitleContainer">
@@ -772,9 +785,6 @@
 </template>
 <style scoped>
 @import url(assets/style.css);
-/*.motionDesignContainer > .navbar{
-      
-    }*/
 .navbar {
   color: #806857;
 }
@@ -1028,13 +1038,16 @@ export default {
 
     //Sticky menu
     var positionSticky =
-      document.getElementById("aboutContainer").offsetTop - 30;
+      document.getElementById("aboutContainer").offsetTop;
+
+    console.log(document.getElementById("navbar").style.marginTop);
 
     window.onscroll = function () {
       var currentPosition = window.pageYOffset;
 
       if (
-        document.getElementById("aboutContainer").getBoundingClientRect().top - document.getElementById("aboutContainer").offsetHeight <
+        document.getElementById("aboutContainer").getBoundingClientRect().top -
+          document.getElementById("aboutContainer").offsetHeight <
         -100
       ) {
         document.getElementById("navbar").classList.add("isVisible");

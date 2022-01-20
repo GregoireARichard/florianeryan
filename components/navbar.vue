@@ -10,22 +10,10 @@
   </div>
 </template>
 <style scoped>
-.navbarLink {
-  color: #fff;
-  padding: 0 30px;
-  width: fit-content;
-  height: fit-content;
-  font-size: 1.5rem;
-  display: flex;
-}
+@import url(assets/style.css);
 .motionDesignContainer > .navbar > .navbarLink,
 .contactContainer > .navbar > .navbarLink {
   color: #806857;
-}
-span.dots {
-  font-size: 1.5rem;
-  color: #fff;
-  font-family: "Quicksand", sans-serif;
 }
 </style>
 <script>
@@ -34,10 +22,5 @@ export default {
   props: {
     color: String,
   },
-  /*mounted() {
-         const navbar = document.querySelector('.navbar')
-         navbar.style.color = this.color
-         console.log(this.color)
-    }*/
 };
 </script>
