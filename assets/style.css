@@ -443,6 +443,10 @@ p.aboutText:nth-of-type(4) {
   top     : 70%;
 }
 
+#flower1{
+  display: none;
+}
+
 .designContainer {
   background-color: var(--backColor4);
 }
@@ -467,6 +471,8 @@ p.aboutText:nth-of-type(4) {
 
 .designTitle {
   font-size: 2.5vw;
+  font-weight: 100;
+  color: #5F563F;
 }
 
 .designFlexRight,
@@ -492,6 +498,11 @@ p.aboutText:nth-of-type(4) {
 .projectDesignTitleContainer {
   max-height: 3vh;
   font-size : 1.77vw;
+}
+
+h3.projectDesignTitle{
+  color: #5F563F;
+  font-weight: 100;
 }
 
 .projectDesignText {
@@ -718,6 +729,18 @@ p.aboutText:nth-of-type(4) {
     width: 450px;
   }
 
+  #designContainer{
+    position: relative;
+  }
+
+  #flower1{
+    display: block;
+    position: absolute;
+    top: -10%;
+    left: 80%;
+  }
+  
+
 }
 
 @media screen and (max-width:768px) {
@@ -832,6 +855,12 @@ p.aboutText:nth-of-type(4) {
     width: 300px;
   }
 
+  #flower1{
+    width: 200px;
+    top: -10%;
+    left: 74%;
+  }
+
 }
 
 @media screen and (max-width:380px) {
@@ -854,6 +883,12 @@ p.aboutText:nth-of-type(4) {
     left : -25%;
     top  : 20%;
     width: 200px;
+  }
+
+  #flower1{
+    width: 150px;
+    top: -10%;
+    left: 70%;
   }
 
 }
