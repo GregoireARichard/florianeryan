@@ -443,18 +443,11 @@ p.aboutText:nth-of-type(4) {
   top     : 70%;
 }
 
-#flower1{
-  display: none;
-}
-
 .designContainer {
   background-color: var(--backColor4);
+  position: relative;
 }
 
-.motionDesignContainer,
-.contactContainer {
-  background-color: var(--backColor3);
-}
 
 .designSubContainer {
   width          : 80vw;
@@ -513,6 +506,30 @@ h3.projectDesignTitle{
 .whiteArrow {
   width : 15%;
   cursor: pointer;
+}
+
+#flower1{
+  bottom: 0;
+  transform: translate(-30%, 50%) scaleX(-1);
+  position: absolute;
+  z-index: 500;
+}
+
+#designDivider {
+  position: absolute;
+  display: block;
+  width: calc(100% + 1.3px);
+  height: fit-content;
+  bottom: -2%;
+}
+
+.motionDesignContainer,
+.contactContainer {
+  background-color: var(--backColor3);
+}
+
+.motionDesignContainer{
+  position: relative;
 }
 
 .motionTitleContainer {
@@ -734,10 +751,9 @@ h3.projectDesignTitle{
   }
 
   #flower1{
-    display: block;
-    position: absolute;
     top: -10%;
     left: 80%;
+    transform: scale(1);
   }
   
 
