@@ -841,6 +841,12 @@ h3.projectDesignTitle{
     width: 350px;
   }
 
+  #designDivider {
+    width: calc(150% + 1.3px);
+    right: 0;
+  }
+  
+
 }
 
 @media screen and (max-width:550px) {
