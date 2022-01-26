@@ -1,5 +1,5 @@
 <template>
-  <div class="navbar" id="navbar">
+  <nav class="navbar" id="navbar">
     <a href="#aboutContainer" class="navbarLink">{{ $t("about_me") }}</a>
     <span class="dots">•</span>
     <a href="#designContainer" class="navbarLink">{{ $t("navbar_des") }}</a>
@@ -7,7 +7,7 @@
     <a href="#motionDesignContainer" class="navbarLink">{{ $t("navbar_motion") }}</a>
     <span class="dots">•</span>
     <a href="#contactContainer" class="navbarLink">{{ $t("navbar_contact") }}</a>
-  </div>
+  </nav>
 </template>
 <style scoped>
 @import url(assets/style.css);

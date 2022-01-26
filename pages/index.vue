@@ -1,5 +1,5 @@
 <template>
-  <div>
+  <div class="allParent">
     <div class="fullPotentialParent">
       <p class="fullPotentialText">{{ $t("full_potential") }}</p>
     </div>
@@ -1029,31 +1029,41 @@
             <h2 class="designTitle">{{ $t("navbar_des") }}</h2>
           </div>
           <div class="designCarouselContainer">
-           <div id="demo" class="carousel slide" data-ride="carousel">
+            <div id="demo" class="carousel slide" data-ride="carousel">
+              <!-- Indicators -->
+              <ul class="carousel-indicators">
+                <li data-target="#demo" data-slide-to="0" class="active"></li>
+                <li data-target="#demo" data-slide-to="1"></li>
+                <li data-target="#demo" data-slide-to="2"></li>
+              </ul>
 
-            <!-- Indicators -->
-            <ul class="carousel-indicators">
-              <li data-target="#demo" data-slide-to="0" class="active"></li>
-              <li data-target="#demo" data-slide-to="1"></li>
-              <li data-target="#demo" data-slide-to="2"></li>
-            </ul>
-            
-            <!-- The slideshow -->
-            <div class="carousel-inner">
-              <div class="carousel-item active">
-                  <img :src="require('../assets/img/synerg.png')" alt="synerg pic" class="synergImg">
+              <!-- The slideshow -->
+              <div class="carousel-inner">
+                <div class="carousel-item active">
+                  <img
+                    :src="require('../assets/img/synerg.png')"
+                    alt="synerg pic"
+                    class="synergImg"
+                  />
+                </div>
+                <div class="carousel-item">
+                  <img
+                    :src="require('../assets/img/synerg.png')"
+                    alt="synerg pic"
+                    class="synergImg"
+                  />
+                </div>
+                <div class="carousel-item">
+                  <img
+                    :src="require('../assets/img/synerg.png')"
+                    alt="synerg pic"
+                    class="synergImg"
+                  />
+                </div>
               </div>
-              <div class="carousel-item">
-                  <img :src="require('../assets/img/synerg.png')" alt="synerg pic" class="synergImg">
-              </div>
-              <div class="carousel-item">
-                  <img :src="require('../assets/img/synerg.png')" alt="synerg pic" class="synergImg">
-              </div>
+
+              <!-- Left and right controls -->
             </div>
-  
-            <!-- Left and right controls -->
-           
-          </div>
           </div>
         </div>
         <div class="designFlexRight">
@@ -2017,31 +2027,45 @@
             <h2 class="designTitle">{{ $t("navbar_motion") }}</h2>
           </div>
           <div class="designCarouselContainer">
-             <div id="carousel2" class="carousel slide" data-ride="carousel">
+            <div id="carousel2" class="carousel slide" data-ride="carousel">
+              <!-- Indicators -->
+              <ul class="carousel-indicators">
+                <li
+                  data-target="#carousel2"
+                  data-slide-to="0"
+                  class="active"
+                ></li>
+                <li data-target="#carousel2" data-slide-to="1"></li>
+                <li data-target="#carousel2" data-slide-to="2"></li>
+              </ul>
 
-            <!-- Indicators -->
-            <ul class="carousel-indicators">
-              <li data-target="#carousel2" data-slide-to="0" class="active"></li>
-              <li data-target="#carousel2" data-slide-to="1"></li>
-              <li data-target="#carousel2" data-slide-to="2"></li>
-            </ul>
-            
-            <!-- The slideshow -->
-            <div class="carousel-inner">
-              <div class="carousel-item active">
-                  <img :src="require('../assets/img/thumbnail.png')" alt="synerg pic" class="synergImg">
+              <!-- The slideshow -->
+              <div class="carousel-inner">
+                <div class="carousel-item active">
+                  <img
+                    :src="require('../assets/img/thumbnail.png')"
+                    alt="synerg pic"
+                    class="synergImg"
+                  />
+                </div>
+                <div class="carousel-item">
+                  <img
+                    :src="require('../assets/img/synerg.png')"
+                    alt="synerg pic"
+                    class="synergImg"
+                  />
+                </div>
+                <div class="carousel-item">
+                  <img
+                    :src="require('../assets/img/synerg.png')"
+                    alt="synerg pic"
+                    class="synergImg"
+                  />
+                </div>
               </div>
-              <div class="carousel-item">
-                  <img :src="require('../assets/img/synerg.png')" alt="synerg pic" class="synergImg">
-              </div>
-              <div class="carousel-item">
-                  <img :src="require('../assets/img/synerg.png')" alt="synerg pic" class="synergImg">
-              </div>
+
+              <!-- Left and right controls -->
             </div>
-  
-            <!-- Left and right controls -->
-            
-          </div>
           </div>
         </div>
       </div>
@@ -2053,7 +2077,6 @@
         fill="none"
         xmlns="http://www.w3.org/2000/svg"
       >
-        <path d="M0.5 639H1440.5V478H0.5V639Z" fill="#FADFCB" />
         <path
           d="M1440.5 353.5V205L1201 144.5L281.5 313L0.5 425.5V447H1440.5V353.5Z"
           fill="#E3C7B2"
@@ -2326,31 +2349,195 @@
     </div>
 
     <div class="contactContainer" id="contactContainer">
-      <div class="contactTitleContainer">
-        <h3 class="contactTitle">{{ $t("contact_me") }}</h3>
-      </div>
-      <div class="contactPolygon">
-        <div class="rountPart">
+      <div id="contactContent">
+        <div class="contactTitleContainer">
+          <h3 class="contactTitle">{{ $t("contact_me") }}</h3>
+        </div>
+        <div class="contactPolygon">
           <p class="contactme">{{ $t("contact_me_text") }}</p>
+          <a class="mailAdress" href="mailto:florianeryan@gmail.com"
+            >florianeryan [at] gmail.com</a
+          >
+          <div id="iconeContainer">
+            <a href="https://www.linkedin.com/in/floriane-ryan-157a231b8/" target="_blank" class="social">
+              <img
+                :src="require('../assets/img/linkedin.png')"
+                alt="linkedin"
+                class="icons"
+              />
+            </a>
+            <a href="https://www.instagram.com/floww_designs/?hl=fr" target="_blank" class="social">
+              <img
+                :src="require('../assets/img/insta.png')"
+                alt="instagram"
+                class="icons"
+              />
+            </a>
+          </div>
         </div>
-        <div class="squarePart">
-          <p class="mailAdress">florianeryan [at] gmail.com</p>
-          <a href="#" class="social">
-            <img
-              :src="require('../assets/img/linkedin.png')"
-              alt="linkedin"
-              class="icons"
-            />
-          </a>
-          <a href="#" class="social">
-            <img
-              :src="require('../assets/img/insta.png')"
-              alt="instagram"
-              class="icons"
-            />
-          </a>
+        <div class="cvDownloadParent">
+          <p>
+            {{ $t("download") }}
+          </p>
+          <p>
+            {{ $t("resume") }}
+          </p>
+          <a href="#">{{ $t("here") }}</a>
         </div>
       </div>
+      <svg
+        width="1451"
+        height="329"
+        viewBox="0 0 1451 329"
+        id="contactDivider"
+        fill="none"
+        xmlns="http://www.w3.org/2000/svg"
+      >
+        <path
+          d="M1440.5 136V249.5L1175.5 200L197.5 220L0.5 152V0L204.5 53.5L1153.5 151.5L1440.5 136Z"
+          fill="#EDD4C1"
+        />
+        <path
+          d="M197.5 220L0.499878 152V317H1440.5V249.5L1175.5 200L197.5 220Z"
+          fill="#E3C7B2"
+        />
+        <g filter="url(#filter0_f_288_9)">
+          <path
+            d="M1353.92 200.238L1439.15 99.2845L1440.5 98.666L1440.5 291.722L1418.52 317L1279.67 317L1294.21 294.097L1353.92 200.238Z"
+            fill="#ABC16E"
+          />
+          <g opacity="0.3">
+            <path
+              d="M1432.74 133.256L1397.73 149.019L1438.13 101.73L1440.5 100.61L1440.5 133.256L1432.74 133.256Z"
+              fill="url(#paint0_linear_288_9)"
+            />
+            <path
+              d="M1421.43 208.267L1440.5 186.514L1440.5 288.635L1415.78 317L1355.35 317L1421.43 208.267Z"
+              fill="url(#paint1_linear_288_9)"
+            />
+          </g>
+          <path
+            opacity="0.7"
+            d="M1378.27 166.052L1280 320.786L1374.44 288.182L1426.85 204.736L1442.68 157.21L1429.04 134L1405.56 134L1378.27 166.052Z"
+            fill="url(#paint2_linear_288_9)"
+          />
+        </g>
+        <g filter="url(#filter1_f_288_9)">
+          <path
+            d="M1209.93 243.563L1244.81 273.89L1261.57 317L1197 316.984L1177.39 304.508L1123.16 258.726L1108.5 226.65L1137.23 226.65L1209.93 243.563Z"
+            fill="#ABC16E"
+          />
+          <path
+            opacity="0.3"
+            d="M1141.41 262.166L1149.87 280.976L1124.47 259.272L1109.58 227.729L1137.9 227.729L1209.73 244.803L1243.6 274.32L1261.52 317H1252.38L1243.6 305.864L1181.7 268.243L1166.52 254.931L1141.41 250.59V262.166Z"
+            fill="url(#paint3_linear_288_9)"
+          />
+          <path
+            opacity="0.7"
+            d="M1159.21 289.751L1176.43 304.414L1196.25 317L1245.67 317L1242.03 306.467L1197.21 278.313L1171.68 269.809L1159.21 277.14V289.751Z"
+            fill="url(#paint4_linear_288_9)"
+          />
+        </g>
+        <defs>
+          <filter
+            id="filter0_f_288_9"
+            x="1271.67"
+            y="90.666"
+            width="179.011"
+            height="238.12"
+            filterUnits="userSpaceOnUse"
+            color-interpolation-filters="sRGB"
+          >
+            <feFlood flood-opacity="0" result="BackgroundImageFix" />
+            <feBlend
+              mode="normal"
+              in="SourceGraphic"
+              in2="BackgroundImageFix"
+              result="shape"
+            />
+            <feGaussianBlur
+              stdDeviation="4"
+              result="effect1_foregroundBlur_288_9"
+            />
+          </filter>
+          <filter
+            id="filter1_f_288_9"
+            x="1100.5"
+            y="218.65"
+            width="169.068"
+            height="106.35"
+            filterUnits="userSpaceOnUse"
+            color-interpolation-filters="sRGB"
+          >
+            <feFlood flood-opacity="0" result="BackgroundImageFix" />
+            <feBlend
+              mode="normal"
+              in="SourceGraphic"
+              in2="BackgroundImageFix"
+              result="shape"
+            />
+            <feGaussianBlur
+              stdDeviation="4"
+              result="effect1_foregroundBlur_288_9"
+            />
+          </filter>
+          <linearGradient
+            id="paint0_linear_288_9"
+            x1="1568.5"
+            y1="96.2936"
+            x2="1324.09"
+            y2="220.621"
+            gradientUnits="userSpaceOnUse"
+          >
+            <stop stop-color="#DCF29E" />
+            <stop offset="1" stop-color="#C7DD87" stop-opacity="0" />
+          </linearGradient>
+          <linearGradient
+            id="paint1_linear_288_9"
+            x1="1568.5"
+            y1="96.2936"
+            x2="1324.09"
+            y2="220.621"
+            gradientUnits="userSpaceOnUse"
+          >
+            <stop stop-color="#DCF29E" />
+            <stop offset="1" stop-color="#C7DD87" stop-opacity="0" />
+          </linearGradient>
+          <linearGradient
+            id="paint2_linear_288_9"
+            x1="1397.37"
+            y1="259.998"
+            x2="1341.39"
+            y2="188.819"
+            gradientUnits="userSpaceOnUse"
+          >
+            <stop stop-color="#97AB5D" />
+            <stop offset="1" stop-color="#A8BE69" stop-opacity="0" />
+          </linearGradient>
+          <linearGradient
+            id="paint3_linear_288_9"
+            x1="1121.55"
+            y1="189.24"
+            x2="1188.34"
+            y2="320.53"
+            gradientUnits="userSpaceOnUse"
+          >
+            <stop stop-color="#DCF29E" />
+            <stop offset="1" stop-color="#C7DD87" stop-opacity="0" />
+          </linearGradient>
+          <linearGradient
+            id="paint4_linear_288_9"
+            x1="1226.89"
+            y1="294.15"
+            x2="1188.66"
+            y2="324.221"
+            gradientUnits="userSpaceOnUse"
+          >
+            <stop stop-color="#97AB5D" />
+            <stop offset="1" stop-color="#A8BE69" stop-opacity="0" />
+          </linearGradient>
+        </defs>
+      </svg>
     </div>
   </div>
 </template>
@@ -2615,7 +2802,6 @@ export default {
 
     window.onscroll = function () {
       var currentPosition = window.pageYOffset;
-      console.log(document.getElementById('designDivider').getBBox().height);
 
       if (
         document.getElementById("aboutContainer").getBoundingClientRect().top -
@@ -2633,7 +2819,7 @@ export default {
         document.getElementById("navbar").classList.remove("isSticky");
       }
 
-      if (currentPosition > colorChangePosition-150) {
+      if (currentPosition > colorChangePosition - 150) {
         for (
           let i = 0;
           i < document.getElementsByClassName("navbarLink").length;

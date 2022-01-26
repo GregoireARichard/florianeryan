@@ -36,6 +36,12 @@ body {
   background-color: var(--mainColor);
 }
 
+.allParent {
+  display       : flex;
+  flex-direction: column;
+  overflow      : hidden;
+}
+
 h2,
 h3 {
   font-family: 'Casta', sans-serif;
@@ -44,6 +50,12 @@ h3 {
 
 p {
   font-family: 'Quicksand', sans-serif;
+}
+
+*::selection,
+*::-moz-selection {
+  background-color: rgb(255, 237, 224);
+  color           : #5F563F;
 }
 
 div[class$="Container"] {
@@ -147,6 +159,7 @@ div[class$="Container"] {
 .fullPotentialParent {
   display   : none;
   text-align: center;
+  margin-top: 3%;
 }
 
 .titlesContainer {
@@ -186,17 +199,16 @@ div[class$="Container"] {
   text-transform: uppercase;
   font-size     : 8vw;
   font-weight   : 100;
-  margin        : 100px 0;
+  margin        : 100px 0 0 0;
   width         : fit-content;
 }
 
 .name {
-  color        : var(--fontColor4);
-  font-size    : 9vw;
-  font-weight  : 100;
-  margin       : 0;
-  margin-bottom: 7%;
-  width        : fit-content;
+  color      : var(--fontColor4);
+  font-size  : 9vw;
+  font-weight: 100;
+  margin     : 0;
+  width      : fit-content;
 }
 
 .header {
@@ -215,7 +227,7 @@ div.arrowContainer {
 }
 
 .arrowContainer a {
-  margin: 25vh 0 0 0;
+  margin: 16vh 0 0 0;
 }
 
 .arrow {
@@ -294,23 +306,23 @@ div.menuContainer {
 /* ====Animation in the upper media queries==== */
 
 #treeMenuText1 {
-  top : 335px;
+  top : 360px;
   left: 415px;
 }
 
 #treeMenuText2 {
-  top : 225px;
-  left: 560px;
+  top : 253px;
+  left: 550px;
 }
 
 #treeMenuText3 {
-  top : 170px;
+  top : 195px;
   left: 275px;
 }
 
 #treeMenuText4 {
-  top : 364px;
-  left: 60px;
+  top : 390px;
+  left: 65px;
 }
 
 a {
@@ -349,17 +361,18 @@ span.dots {
   font-size  : 1.5rem;
   color      : #fff;
   font-family: "Quicksand", sans-serif;
-  transition: all 0.7s;
+  transition : all 0.7s;
 }
 
 .isSticky {
-  position    : fixed;
-  left        : 50%;
-  transform   : translateX(-50%);
+  position   : fixed;
+  left       : 50%;
+  transform  : translateX(-50%);
   margin-left: 7.5px;
 }
 
-.navbarLink.isColorized, .dots.isColorized{
+.navbarLink.isColorized,
+.dots.isColorized {
   color: var(--fontColor5);
 }
 
@@ -390,7 +403,7 @@ div.aboutmeSubContainer {
   z-index    : 200;
   font-size  : 10vh;
   font-weight: 100;
-  top        : 90%;
+  top        : 6vh;
 }
 
 div.aboutImgContainer {
@@ -491,9 +504,11 @@ p.aboutText:nth-of-type(4) {
   max-height: 30vh;
   width     : fit-content;
 }
-.carousel-indicators{
-  transform: translate(-46vw,5vh);
+
+.carousel-indicators {
+  transform: translate(-46vw, 5vh);
 }
+
 .synergImg {
   width: 35%;
 }
@@ -560,53 +575,108 @@ h3.projectDesignTitle {
   z-index : 200;
 }
 
-.contactContainer {
+div.contactContainer {
   position: relative;
+  height  : 110vh;
 }
 
-.contactTitleContainer {
-  max-height: 5vh;
-  width     : 20vw;
-  font-size : 2vw;
-  text-align: center;
-  transform : translate(-200px, 190px);
+#contactContent {
+  position       : relative;
+  z-index        : 5;
+  width          : 100%;
+  height         : 100%;
+  display        : flex;
+  flex-direction : column;
+  justify-content: center;
+  align-items    : center;
+}
+
+div.contactTitleContainer {
+  max-height   : 5vh;
+  width        : 100%;
+  margin-bottom: 3%;  
+}
+
+.contactTitle {
+  font-size: 4.5rem;
+  color: #5F563F;
+  position: relative;
+  width: fit-content;
+  left: 20%;
 }
 
 .contactPolygon {
-  width : 30vw;
-  height: 10vw;
-  margin: 30vh auto 0 auto;
-}
-
-.rountPart,
-.squarePart {
-  width     : 30vw;
-  height    : 5vw;
-  background: var(--mainColor);
-  text-align: center;
-}
-
-.rountPart {
-  border-radius: 30px;
-}
-
-.squarePart {
-  transform: translateY(-40px);
+  width          : 45vw;
+  height         : fit-content;
+  display        : flex;
+  flex-direction : column;
+  justify-content: center;
+  align-items    : center;
+  background     : var(--mainColor);
+  border-radius  : 96px 96px 0 0;
 }
 
 .contactme {
   color      : var(--fontColor1);
-  padding-top: 10px;
-  font-size  : 12px;
+  padding-top: 30px;
+  font-size  : 1.5rem;
 }
 
 .mailAdress {
   font-family: 'Casta', sans-serif;
+  font-size  : 2.75rem;
+  font-weight: 100;
+  color      : #5F563F;
+}
+
+#iconeContainer {
+  display        : flex;
+  justify-content: space-evenly;
+  width          : 20%;
+  margin         : 3% 0 5% 0;
 }
 
 .icons {
-  width        : 5%;
   padding-right: 5px;
+}
+
+.social {
+  width: fit-content;
+}
+
+.cvDownloadParent {
+  width          : 20vw;
+  display        : flex;
+  flex-direction : column;
+  justify-content: center;
+  align-items    : center;
+  margin-top     : 30px;
+  padding: 10px 0 7px 0;
+  background     : var(--mainColor);
+  border-radius: 0 0 65px 65px;
+}
+
+.cvDownloadParent a {
+  font-family    : 'Quicksand', sans-serif;
+  font-size      : 1.5rem;
+  text-decoration: underline;
+  color          : #806857;
+}
+
+.cvDownloadParent p {
+  text-align: center;
+  font-size : 1.5rem;
+  margin    : 0;
+  color     : #806857;
+}
+
+#contactDivider {
+  position  : absolute;
+  z-index   : 0;
+  width     : calc(100% + 1.3px);
+  height    : fit-content;
+  bottom    : -25px;
+  overflow-y: hidden;
 }
 
 @media screen and (max-width:1440px) {
@@ -620,12 +690,14 @@ h3.projectDesignTitle {
   }
 
   .aboutmeTitleContainer {
-    margin: 0 auto 0 35vw;
-    top   : 8%;
+    margin     : 0 auto 0 35vw;
+    padding-top: 14%;
+    top        : 8%;
   }
 
   .aboutmeTitle {
     font-size: 5rem;
+    top      : 2.5vh;
   }
 
   .aboutmeSubContainer {
@@ -687,7 +759,7 @@ h3.projectDesignTitle {
 
   .mainTitle {
     font-size: 6rem;
-    margin   : 12% 0;
+    margin   : 12% 0 0 0;
   }
 
   .name {
@@ -707,28 +779,28 @@ h3.projectDesignTitle {
   }
 
   #treeMenuText1 {
-    top : 194px;
-    left: 286px;
+    top : 215px;
+    left: 287px;
   }
 
   #treeMenuText2 {
-    top : 119px;
+    top : 141px;
     left: 385px;
   }
 
   #treeMenuText3 {
-    top : 84px;
-    left: 184px;
+    top : 106px;
+    left: 181px;
   }
 
   #treeMenuText4 {
-    top : 216px;
+    top : 238px;
     left: 11px;
   }
 
   .isSticky {
     margin-left: 0;
-  }  
+  }
 
   .navbar {
     max-width: 100vw;
@@ -765,6 +837,7 @@ h3.projectDesignTitle {
 
   .aboutmeTitle {
     font-size: 4rem;
+    top      : 8vh;
   }
 
   #decorationTree1 {
@@ -783,7 +856,6 @@ h3.projectDesignTitle {
     transform: scale(1);
   }
 
-
 }
 
 @media screen and (max-width:768px) {
@@ -798,8 +870,8 @@ h3.projectDesignTitle {
   }
 
   .mainTitle {
-    font-size: 5rem;
-    margin   : 30% 0 12% 0;
+    font-size: 4rem;
+    margin   : 15% 0 0 0;
   }
 
   .name {
@@ -824,22 +896,22 @@ h3.projectDesignTitle {
   }
 
   #treeMenuText1 {
-    top : 98px;
-    left: 155px;
+    top : 113px;
+    left: 160px;
   }
 
   #treeMenuText2 {
-    top : 56px;
-    left: 217px;
+    top : 71px;
+    left: 215px;
   }
 
   #treeMenuText3 {
-    top : 35px;
-    left: 100px;
+    top : 49px;
+    left: 105px;
   }
 
   #treeMenuText4 {
-    top : 112px;
+    top : 126px;
     left: 3px;
   }
 
@@ -858,7 +930,7 @@ h3.projectDesignTitle {
   }
 
   .aboutmeTitle {
-    top      : 150%;
+    top      : 7vh;
     font-size: 3rem;
   }
 
@@ -881,9 +953,13 @@ h3.projectDesignTitle {
     width: 75vw;
   }
 
+  .navbar {
+    margin-top: 30px;
+  }
+
   .navbarLink {
-    font-size: 0.95rem;
-    padding  : 0 13px;
+    font-size: 0.85rem;
+    padding  : 0 7px;
   }
 
   span.dots {
@@ -914,6 +990,14 @@ h3.projectDesignTitle {
 
 @media screen and (max-width:380px) {
 
+  .mainTitle {
+    font-size: 3rem;
+  }
+
+  .name {
+    font-size: 3rem;
+  }
+
   .navbarLink {
     font-size: 0.75rem;
     padding  : 0 5px;
@@ -924,7 +1008,7 @@ h3.projectDesignTitle {
   }
 
   .aboutmeTitle {
-    top      : 110%;
+    top      : 6vh;
     font-size: 2.5rem;
   }
 
@@ -949,14 +1033,6 @@ h3.projectDesignTitle {
     transform: translate(-42%, -50%);
   }
 
-  .mainTitle {
-    font-size: 3rem;
-  }
-
-  .name {
-    font-size: 3rem;
-  }
-
   div.menuContainer {
     height: 200px;
   }
@@ -970,7 +1046,7 @@ h3.projectDesignTitle {
   }
 
   .aboutmeTitle {
-    top      : 120%;
+    top      : 5vh;
     font-size: 2rem;
   }
 
