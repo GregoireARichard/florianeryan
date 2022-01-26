@@ -491,7 +491,9 @@ p.aboutText:nth-of-type(4) {
   max-height: 30vh;
   width     : fit-content;
 }
-
+.carousel-indicators{
+  transform: translate(-46vw,5vh);
+}
 .synergImg {
   width: 35%;
 }

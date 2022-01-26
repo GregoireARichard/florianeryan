@@ -1029,11 +1029,31 @@
             <h2 class="designTitle">{{ $t("navbar_des") }}</h2>
           </div>
           <div class="designCarouselContainer">
-            <img
-              :src="require('../assets/img/synerg.png')"
-              alt="synerghetic"
-              class="synergImg"
-            />
+           <div id="demo" class="carousel slide" data-ride="carousel">
+
+            <!-- Indicators -->
+            <ul class="carousel-indicators">
+              <li data-target="#demo" data-slide-to="0" class="active"></li>
+              <li data-target="#demo" data-slide-to="1"></li>
+              <li data-target="#demo" data-slide-to="2"></li>
+            </ul>
+            
+            <!-- The slideshow -->
+            <div class="carousel-inner">
+              <div class="carousel-item active">
+                  <img :src="require('../assets/img/synerg.png')" alt="synerg pic" class="synergImg">
+              </div>
+              <div class="carousel-item">
+                  <img :src="require('../assets/img/synerg.png')" alt="synerg pic" class="synergImg">
+              </div>
+              <div class="carousel-item">
+                  <img :src="require('../assets/img/synerg.png')" alt="synerg pic" class="synergImg">
+              </div>
+            </div>
+  
+            <!-- Left and right controls -->
+           
+          </div>
           </div>
         </div>
         <div class="designFlexRight">
@@ -1997,11 +2017,31 @@
             <h2 class="designTitle">{{ $t("navbar_motion") }}</h2>
           </div>
           <div class="designCarouselContainer">
-            <img
-              :src="require('../assets/img/thumbnail.png')"
-              alt="synerghetic"
-              class="synergImg"
-            />
+             <div id="carousel2" class="carousel slide" data-ride="carousel">
+
+            <!-- Indicators -->
+            <ul class="carousel-indicators">
+              <li data-target="#carousel2" data-slide-to="0" class="active"></li>
+              <li data-target="#carousel2" data-slide-to="1"></li>
+              <li data-target="#carousel2" data-slide-to="2"></li>
+            </ul>
+            
+            <!-- The slideshow -->
+            <div class="carousel-inner">
+              <div class="carousel-item active">
+                  <img :src="require('../assets/img/thumbnail.png')" alt="synerg pic" class="synergImg">
+              </div>
+              <div class="carousel-item">
+                  <img :src="require('../assets/img/synerg.png')" alt="synerg pic" class="synergImg">
+              </div>
+              <div class="carousel-item">
+                  <img :src="require('../assets/img/synerg.png')" alt="synerg pic" class="synergImg">
+              </div>
+            </div>
+  
+            <!-- Left and right controls -->
+            
+          </div>
           </div>
         </div>
       </div>
