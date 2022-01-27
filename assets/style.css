@@ -594,15 +594,15 @@ div.contactContainer {
 div.contactTitleContainer {
   max-height   : 5vh;
   width        : 100%;
-  margin-bottom: 3%;  
+  margin-bottom: 3%;
 }
 
 .contactTitle {
   font-size: 4.5rem;
-  color: #5F563F;
-  position: relative;
-  width: fit-content;
-  left: 20%;
+  color    : #5F563F;
+  position : relative;
+  width    : fit-content;
+  left     : 20%;
 }
 
 .contactPolygon {
@@ -620,6 +620,7 @@ div.contactTitleContainer {
   color      : var(--fontColor1);
   padding-top: 30px;
   font-size  : 1.5rem;
+  text-align : center;
 }
 
 .mailAdress {
@@ -627,6 +628,7 @@ div.contactTitleContainer {
   font-size  : 2.75rem;
   font-weight: 100;
   color      : #5F563F;
+  text-align : center;
 }
 
 #iconeContainer {
@@ -651,9 +653,9 @@ div.contactTitleContainer {
   justify-content: center;
   align-items    : center;
   margin-top     : 30px;
-  padding: 10px 0 7px 0;
+  padding        : 10px 0 7px 0;
   background     : var(--mainColor);
-  border-radius: 0 0 65px 65px;
+  border-radius  : 0 0 65px 65px;
 }
 
 .cvDownloadParent a {
@@ -706,6 +708,10 @@ div.contactTitleContainer {
 
   #decorationTree1 {
     left: -20.5%;
+  }
+
+  .contactTitle {
+    left: 15%;
   }
 
 }
@@ -856,6 +862,29 @@ div.contactTitleContainer {
     transform: scale(1);
   }
 
+  .contactTitle {
+    left     : 10%;
+    font-size: 3.75rem;
+  }
+
+  .contactme, .cvDownloadParent p, .cvDownloadParent a {
+    font-size: 1.25rem;
+  }
+
+  .mailAdress {
+    font-size: 2.25rem;
+  }
+  
+  .contactPolygon {
+    width        : 65vw;
+    border-radius: 96px 96px 0 0;
+  }
+  
+  .cvDownloadParent{
+    width: 30vw;
+    border-radius: 0 0 55px 55px;
+  }
+
 }
 
 @media screen and (max-width:768px) {
@@ -945,6 +974,41 @@ div.contactTitleContainer {
     right: 0;
   }
 
+  .contactTitle {
+    font-size: 3rem;
+  }
+
+  .mailAdress {
+    font-size: 2rem;
+  }
+
+  .contactme, .cvDownloadParent p, .cvDownloadParent a {
+    font-size: 1rem;
+  }
+
+  .contactPolygon {
+    width        : 75vw;
+    border-radius: 70px 70px 0 0;
+
+  }
+
+  .social img{
+    width: 100%;
+  }
+
+  .cvDownloadParent{
+    width: 40vw;
+    border-radius: 0 0 45px 45px;
+  }
+
+  #contactDivider {
+    bottom    : -15px;
+  }  
+
+  div.contactContainer {
+    height  : 90vh;
+    padding-top: 15%;
+  }  
 
 }
 
@@ -986,6 +1050,18 @@ div.contactTitleContainer {
     left : 74%;
   }
 
+  .mailAdress {
+    font-size: 1.75rem;
+  }
+
+  .contactPolygon {
+    width: 85vw;
+  }
+
+  #contactDivider {
+    bottom    : -5px;
+  }  
+
 }
 
 @media screen and (max-width:380px) {
@@ -1024,6 +1100,36 @@ div.contactTitleContainer {
     left : 70%;
   }
 
+  .contactTitle {
+    font-size: 2.5rem;
+  }
+
+  .mailAdress {
+    font-size: 1.5rem;
+  }
+
+  .contactme{
+    font-size: 0.75rem;
+  }
+
+  .cvDownloadParent p, .cvDownloadParent a {
+    font-size: 1rem;
+  }
+
+  .contactPolygon {
+    border-radius: 40px 40px 0 0;
+  }
+
+  .cvDownloadParent{
+    width: 45vw;
+    border-radius: 0 0 30px 30px;
+  }
+
+  div.contactContainer {
+    height  : 80vh;
+    padding-top: 40%;
+  }  
+
 }
 
 @media screen and (max-width:320px) {
@@ -1049,5 +1155,9 @@ div.contactTitleContainer {
     top      : 5vh;
     font-size: 2rem;
   }
+
+  div.contactContainer {
+    padding-top: 55%;
+  }  
 
 }
