@@ -256,6 +256,20 @@ div.arrowContainer {
   }
 }
 
+@keyframes floatingBis {
+  0% {
+    transform: translate(0, 10px);
+  }
+
+  50% {
+    transform: translate(0, 0px);
+  }
+
+  100% {
+    transform: translate(0, 10px);
+  }
+}
+
 @keyframes floating2 {
   0% {
     transform: translate(0, 0px);
@@ -267,6 +281,20 @@ div.arrowContainer {
 
   100% {
     transform: translate(0, 0px);
+  }
+}
+
+@keyframes floating3 {
+  0% {
+    transform: translate(0, 20px);
+  }
+
+  50% {
+    transform: translate(0, 0px);
+  }
+
+  100% {
+    transform: translate(0, 20px);
   }
 }
 
@@ -709,6 +737,21 @@ div.contactTitleContainer {
   animation-timing-function: ease-in-out;
 }
 
+#citron2 {
+  position                 : absolute;
+  z-index                  : 10;
+  bottom                   : -3%;
+  left                     : 15%;
+  width                    : 300px;
+  height                   : fit-content;
+  animation-name           : floating3;
+  animation-duration       : 3s;
+  animation-iteration-count: infinite;
+  animation-timing-function: ease-in-out;
+}
+
+
+
 @media screen and (max-width:1440px) {
   div.aboutImgContainer {
     width: 40vw;
@@ -742,6 +785,12 @@ div.contactTitleContainer {
     left: 15%;
   }
 
+  #citron2 {
+    bottom: -3%;
+    left  : 13%;
+    width : 250px;
+  }
+
 }
 
 @media screen and (max-width:1150px) {
@@ -749,6 +798,16 @@ div.contactTitleContainer {
     left : -20%;
     top  : 60%;
     width: 500px;
+  }
+
+  .contactPolygon {
+    width          : 55vw;
+  }  
+
+  #citron2 {
+    bottom: -3%;
+    left  : 15%;
+    width : 200px;
   }
 
 }
@@ -764,6 +823,10 @@ div.contactTitleContainer {
 
   .aboutmeSubContainer {
     height: 100vh;
+  }
+
+  #navbar {
+    margin-top: 20px;
   }
 
 }
@@ -890,6 +953,11 @@ div.contactTitleContainer {
     transform: scale(1);
   }
 
+  div.contactContainer {
+    padding-top: 15%;
+    height     : 85vh;
+  }
+
   .contactTitle {
     left     : 10%;
     font-size: 3.75rem;
@@ -916,9 +984,12 @@ div.contactTitleContainer {
   }
 
   #citron1 {
-    width: 200px;
-    top  : 30%;
-    left : 75%;
+    top : 30%;
+    left: 75%;
+  }
+
+  #citron2 {
+    left: 3%;
   }
 
 }
@@ -1055,6 +1126,13 @@ div.contactTitleContainer {
     animation-name: floating;
   }
 
+  #citron2 {
+    bottom        : -3%;
+    left          : 5%;
+    width         : 150px;
+    animation-name: floatingBis;
+  }
+
 }
 
 @media screen and (max-width:550px) {
@@ -1095,6 +1173,11 @@ div.contactTitleContainer {
     left : 74%;
   }
 
+  div.contactContainer {
+    height     : 80vh;
+    padding-top: 45%;
+  }
+
   .mailAdress {
     font-size: 1.75rem;
   }
@@ -1109,8 +1192,13 @@ div.contactTitleContainer {
 
   #citron1 {
     width: 100px;
-    top  : 20%;
+    top  : 10%;
     left : 82%;
+  }
+
+  #citron2 {
+    width: 100px;
+    left: 3%;
   }
 
 }
@@ -1151,6 +1239,7 @@ div.contactTitleContainer {
     left : 70%;
   }
 
+
   .contactTitle {
     font-size: 2.5rem;
   }
@@ -1178,7 +1267,7 @@ div.contactTitleContainer {
   }
 
   div.contactContainer {
-    height     : 80vh;
+    height     : 90vh;
     padding-top: 40%;
   }
 
@@ -1186,6 +1275,10 @@ div.contactTitleContainer {
     width: 70px;
     top  : 10%;
     left : 82%;
+  }
+
+  #citron2{
+    width: 80px;
   }
 
 }
