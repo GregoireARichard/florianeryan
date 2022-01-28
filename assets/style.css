@@ -750,7 +750,77 @@ div.contactTitleContainer {
   animation-timing-function: ease-in-out;
 }
 
+@keyframes liquid1 {
+  0% {
+    opacity: 0;
+    transform: translate(0, -10%);
+  }
 
+  40% {
+    opacity: 0.8;
+  }
+
+  100% {
+    opacity: 0;
+    transform: translate(0, 90%);
+  }
+}
+
+@keyframes liquid2 {
+  0% {
+    opacity: 0;
+    transform: translate(0, -10%);
+  }
+
+  5% {
+    opacity: 0.8;
+  }
+
+  100% {
+    opacity: 0;
+    transform: translate(0, 90%);
+  }
+}
+
+@keyframes liquid3 {
+  0% {
+    opacity: 0;
+    transform: translate(0, -40%);
+  }
+
+  30% {
+    opacity: 0.8;
+  }
+
+  100% {
+    opacity: 0;
+    transform: translate(0, 70%);
+  }
+}
+
+
+#liquid1{
+  animation-name           : liquid1;
+  animation-duration       : 4s;
+  animation-delay: 0.8s;
+  animation-iteration-count: infinite;
+  animation-timing-function: linear;
+}
+
+#liquid2{
+  animation-name           : liquid2;
+  animation-delay: 0.5s;
+  animation-duration       : 4s;
+  animation-iteration-count: infinite;
+  animation-timing-function: linear;
+}
+
+#liquid3{
+  animation-name           : liquid3;
+  animation-duration       : 4s;
+  animation-iteration-count: infinite;
+  animation-timing-function: linear;
+}
 
 @media screen and (max-width:1440px) {
   div.aboutImgContainer {
