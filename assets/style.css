@@ -256,6 +256,20 @@ div.arrowContainer {
   }
 }
 
+@keyframes floating2 {
+  0% {
+    transform: translate(0, 0px);
+  }
+
+  50% {
+    transform: translate(0, 20px);
+  }
+
+  100% {
+    transform: translate(0, 0px);
+  }
+}
+
 #divider1 {
   position: relative;
   top     : 2%;
@@ -609,6 +623,8 @@ div.contactTitleContainer {
   width          : 45vw;
   height         : fit-content;
   display        : flex;
+  position       : relative;
+  z-index        : 5;
   flex-direction : column;
   justify-content: center;
   align-items    : center;
@@ -679,6 +695,18 @@ div.contactTitleContainer {
   height    : fit-content;
   bottom    : -25px;
   overflow-y: hidden;
+}
+
+#citron1 {
+  width                    : 200px;
+  position                 : absolute;
+  z-index                  : 0;
+  top                      : 30%;
+  left                     : 69%;
+  animation-name           : floating2;
+  animation-duration       : 3s;
+  animation-iteration-count: infinite;
+  animation-timing-function: ease-in-out;
 }
 
 @media screen and (max-width:1440px) {
@@ -867,22 +895,30 @@ div.contactTitleContainer {
     font-size: 3.75rem;
   }
 
-  .contactme, .cvDownloadParent p, .cvDownloadParent a {
+  .contactme,
+  .cvDownloadParent p,
+  .cvDownloadParent a {
     font-size: 1.25rem;
   }
 
   .mailAdress {
     font-size: 2.25rem;
   }
-  
+
   .contactPolygon {
     width        : 65vw;
     border-radius: 96px 96px 0 0;
   }
-  
-  .cvDownloadParent{
-    width: 30vw;
+
+  .cvDownloadParent {
+    width        : 30vw;
     border-radius: 0 0 55px 55px;
+  }
+
+  #citron1 {
+    width: 200px;
+    top  : 30%;
+    left : 75%;
   }
 
 }
@@ -982,7 +1018,9 @@ div.contactTitleContainer {
     font-size: 2rem;
   }
 
-  .contactme, .cvDownloadParent p, .cvDownloadParent a {
+  .contactme,
+  .cvDownloadParent p,
+  .cvDownloadParent a {
     font-size: 1rem;
   }
 
@@ -992,23 +1030,30 @@ div.contactTitleContainer {
 
   }
 
-  .social img{
+  .social img {
     width: 100%;
   }
 
-  .cvDownloadParent{
-    width: 40vw;
+  .cvDownloadParent {
+    width        : 40vw;
     border-radius: 0 0 45px 45px;
   }
 
   #contactDivider {
-    bottom    : -15px;
-  }  
+    bottom: -15px;
+  }
 
   div.contactContainer {
-    height  : 90vh;
+    height     : 90vh;
     padding-top: 15%;
-  }  
+  }
+
+  #citron1 {
+    width         : 150px;
+    top           : 20%;
+    left          : 80%;
+    animation-name: floating;
+  }
 
 }
 
@@ -1059,8 +1104,14 @@ div.contactTitleContainer {
   }
 
   #contactDivider {
-    bottom    : -5px;
-  }  
+    bottom: -5px;
+  }
+
+  #citron1 {
+    width: 100px;
+    top  : 20%;
+    left : 82%;
+  }
 
 }
 
@@ -1108,11 +1159,12 @@ div.contactTitleContainer {
     font-size: 1.5rem;
   }
 
-  .contactme{
+  .contactme {
     font-size: 0.75rem;
   }
 
-  .cvDownloadParent p, .cvDownloadParent a {
+  .cvDownloadParent p,
+  .cvDownloadParent a {
     font-size: 1rem;
   }
 
@@ -1120,15 +1172,21 @@ div.contactTitleContainer {
     border-radius: 40px 40px 0 0;
   }
 
-  .cvDownloadParent{
-    width: 45vw;
+  .cvDownloadParent {
+    width        : 45vw;
     border-radius: 0 0 30px 30px;
   }
 
   div.contactContainer {
-    height  : 80vh;
+    height     : 80vh;
     padding-top: 40%;
-  }  
+  }
+
+  #citron1 {
+    width: 70px;
+    top  : 10%;
+    left : 82%;
+  }
 
 }
 
@@ -1158,6 +1216,6 @@ div.contactTitleContainer {
 
   div.contactContainer {
     padding-top: 55%;
-  }  
+  }
 
 }

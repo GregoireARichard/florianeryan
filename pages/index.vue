@@ -2353,20 +2353,138 @@
         <div class="contactTitleContainer">
           <h3 class="contactTitle">{{ $t("contact_me") }}</h3>
         </div>
+        <svg
+          width="230"
+          height="192"
+          viewBox="0 0 230 192"
+          id="citron1"
+          fill="none"
+          xmlns="http://www.w3.org/2000/svg"
+        >
+          <path
+            d="M17.6611 133.535L0 102.945L153.994 132.64L103.217 160.883L65.2362 162.954L37.1146 152.357L17.6611 133.535Z"
+            fill="url(#paint0_linear_2_298)"
+          />
+          <path
+            d="M175.892 1.39391L0 102.945L31.9354 128.514L83.0829 144.601L122.101 142.467L152.786 133.337L186.393 106.958L199.53 79.5166L199.363 42.0463L185.743 12.8796L175.892 1.39391Z"
+            fill="#FED03D"
+          />
+          <path
+            d="M28.0138 115.215L8.05005 98.2976L168.647 5.57677L176.361 16.1496L187.748 35.8721L191.782 61.4497L186.123 85.1104L166.297 112.12L134.097 130.711L95.5604 137.397L53.5503 127.841L28.0138 115.215Z"
+            fill="#FFF7E2"
+          />
+          <path
+            d="M163.13 87.1155L104.484 57.1116L100.55 54.0161L104.173 51.9247L164.03 43.1263L175.503 43.4787L183.371 49.6696L184.18 63.1556L178.566 84.1067L170.919 88.522L163.13 87.1155Z"
+            fill="url(#paint1_linear_2_298)"
+          />
+          <path
+            d="M107.058 117.341L88.1975 63.2942L84.6828 63.7134L50.496 115.114L54.2141 121.554L64.4345 125.314L98.4691 130.35L106.922 125.47L107.058 117.341Z"
+            fill="url(#paint2_linear_2_298)"
+          />
+          <path
+            d="M44.5787 106.724L79.695 56.9333L14.0876 94.8118L25.6734 107.443L35.3212 112.069L44.5787 106.724Z"
+            fill="url(#paint3_linear_2_298)"
+          />
+          <path
+            d="M157.79 91.8083L97.874 61.4641L95.8615 62.626L110.506 101.934L118.718 120.806L127.499 124.86L137.006 123.665L163.616 105.618L163.52 97.0863L157.79 91.8083Z"
+            fill="url(#paint4_linear_2_298)"
+          />
+          <path
+            d="M167.108 35.4452L98.2097 46.2439L164.22 8.13307L171.888 21.4155L173.191 29.2498L167.108 35.4452Z"
+            fill="url(#paint5_linear_2_298)"
+          />
+          <defs>
+            <linearGradient
+              id="paint0_linear_2_298"
+              x1="-20.0338"
+              y1="109.145"
+              x2="114.367"
+              y2="166.252"
+              gradientUnits="userSpaceOnUse"
+            >
+              <stop stop-color="#FED03D" />
+              <stop offset="1" stop-color="#FEB13D" />
+            </linearGradient>
+            <linearGradient
+              id="paint1_linear_2_298"
+              x1="163.715"
+              y1="74.3877"
+              x2="137.089"
+              y2="-11.0155"
+              gradientUnits="userSpaceOnUse"
+            >
+              <stop stop-color="#FCE450" />
+              <stop offset="1" stop-color="#FFCF88" />
+            </linearGradient>
+            <linearGradient
+              id="paint2_linear_2_298"
+              x1="91.7731"
+              y1="116.054"
+              x2="70.2013"
+              y2="31.1273"
+              gradientUnits="userSpaceOnUse"
+            >
+              <stop stop-color="#FCE450" />
+              <stop offset="1" stop-color="#FFCF88" />
+            </linearGradient>
+            <linearGradient
+              id="paint3_linear_2_298"
+              x1="63.2793"
+              y1="88.7409"
+              x2="48.0716"
+              y2="56.2322"
+              gradientUnits="userSpaceOnUse"
+            >
+              <stop stop-color="#FCE450" />
+              <stop offset="1" stop-color="#FFCF88" />
+            </linearGradient>
+            <linearGradient
+              id="paint4_linear_2_298"
+              x1="142.018"
+              y1="100.126"
+              x2="125.719"
+              y2="4.46643"
+              gradientUnits="userSpaceOnUse"
+            >
+              <stop stop-color="#FCE450" />
+              <stop offset="1" stop-color="#FFCF88" />
+            </linearGradient>
+            <linearGradient
+              id="paint5_linear_2_298"
+              x1="147.468"
+              y1="39.7285"
+              x2="132.468"
+              y2="7.8363"
+              gradientUnits="userSpaceOnUse"
+            >
+              <stop stop-color="#FCE450" />
+              <stop offset="1" stop-color="#FFCF88" />
+            </linearGradient>
+          </defs>
+        </svg>
+
         <div class="contactPolygon">
           <p class="contactme">{{ $t("contact_me_text") }}</p>
           <a class="mailAdress" href="mailto:florianeryan@gmail.com"
             >florianeryan [at] gmail.com</a
           >
           <div id="iconeContainer">
-            <a href="https://www.linkedin.com/in/floriane-ryan-157a231b8/" target="_blank" class="social">
+            <a
+              href="https://www.linkedin.com/in/floriane-ryan-157a231b8/"
+              target="_blank"
+              class="social"
+            >
               <img
                 :src="require('../assets/img/linkedin.png')"
                 alt="linkedin"
                 class="icons"
               />
             </a>
-            <a href="https://www.instagram.com/floww_designs/?hl=fr" target="_blank" class="social">
+            <a
+              href="https://www.instagram.com/floww_designs/?hl=fr"
+              target="_blank"
+              class="social"
+            >
               <img
                 :src="require('../assets/img/insta.png')"
                 alt="instagram"
