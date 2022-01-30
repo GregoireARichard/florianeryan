@@ -7,83 +7,86 @@
       <div class="titlesContainer">
         <h1 class="mainTitle" id="mainTitle">Portfolio</h1>
         <h2 class="name" id="name">Floriane Ryan</h2>
-        <svg
-          id="svgAccueil"
-          data-name="svgAccueil"
-          xmlns="http://www.w3.org/2000/svg"
-          xmlns:xlink="http://www.w3.org/1999/xlink"
-          width="518"
-          height="733"
-          viewBox="0 0 518 733"
-        >
-          <defs>
-            <linearGradient
-              id="linear-gradient"
-              x1="0.5"
-              x2="0.5"
-              y2="1"
-              gradientUnits="objectBoundingBox"
-            >
-              <stop offset="0" stop-color="#ffe1ca" />
-              <stop offset="1" stop-color="#f6dcc7" />
-            </linearGradient>
-            <linearGradient
-              id="linear-gradient-2"
-              x1="0.5"
-              x2="0.5"
-              y2="1"
-              gradientUnits="objectBoundingBox"
-            >
-              <stop offset="0" stop-color="#f0d2bc" />
-              <stop offset="1" stop-color="#f0d2bc" />
-            </linearGradient>
-          </defs>
-          <rect
-            id="Rectangle_1"
-            data-name="Rectangle 1"
-            width="214"
-            height="661"
-            transform="translate(303 19)"
-            fill="none"
-            stroke="#472c0c"
-            stroke-width="2"
-          />
-          <rect
-            id="Rectangle_2"
-            data-name="Rectangle 2"
-            width="214"
-            height="661"
-            transform="translate(275 1)"
-            fill="none"
-            stroke="#bb996f"
-            stroke-width="2"
-          />
-          <path
-            id="Fond_rond"
-            data-name="Fond rond"
-            d="M0,222.5C0,99.617,99.617,0,222.5,0h0C345.383,0,445,99.617,445,222.5V682H0Z"
-            transform="translate(0 51)"
-            fill="url(#linear-gradient)"
-          />
-          <path
-            id="vagueAccueil1"
-            data-name="Vague Accueil 1"
-            d="M0,733H445V552.5S340.512,510.719,281,532c-79.275,28.347-118.5,95-222.5,82.5C17.664,609.592,0,733,0,733Z"
-            fill="url(#linear-gradient-2)"
-          />
-          <path
-            id="vagueAccueil2"
-            data-name="Vague Accueil 2"
-            d="M445,733H0V523s80.988,75.719,140.5,97c79.275,28.348,161.2-10.348,241,16.5C420.483,649.616,445,733,445,733Z"
-            fill="#fce1cd"
-          />
-          <path
-            id="vagueAccueil3"
-            data-name="Vague Accueil 3"
-            d="M0,733H445V591s-75.988,67.219-135.5,88.5c-79.275,28.348-135.705-20.848-215.5,6C55.017,698.616,0,733,0,733Z"
-            fill="#ffe7d5"
-          />
-        </svg>
+      <div id="svgAccueilParent">
+          <svg
+            v-rellax="{speed:1}"
+            id="svgAccueil"
+            data-name="svgAccueil"
+            xmlns="http://www.w3.org/2000/svg"
+            xmlns:xlink="http://www.w3.org/1999/xlink"
+            width="518"
+            height="733"
+            viewBox="0 0 518 733"
+          >
+            <defs>
+              <linearGradient
+                id="linear-gradient"
+                x1="0.5"
+                x2="0.5"
+                y2="1"
+                gradientUnits="objectBoundingBox"
+              >
+                <stop offset="0" stop-color="#ffe1ca" />
+                <stop offset="1" stop-color="#f6dcc7" />
+              </linearGradient>
+              <linearGradient
+                id="linear-gradient-2"
+                x1="0.5"
+                x2="0.5"
+                y2="1"
+                gradientUnits="objectBoundingBox"
+              >
+                <stop offset="0" stop-color="#f0d2bc" />
+                <stop offset="1" stop-color="#f0d2bc" />
+              </linearGradient>
+            </defs>
+            <rect
+              id="Rectangle_1"
+              data-name="Rectangle 1"
+              width="214"
+              height="661"
+              transform="translate(303 19)"
+              fill="none"
+              stroke="#472c0c"
+              stroke-width="2"
+            />
+            <rect
+              id="Rectangle_2"
+              data-name="Rectangle 2"
+              width="214"
+              height="661"
+              transform="translate(275 1)"
+              fill="none"
+              stroke="#bb996f"
+              stroke-width="2"
+            />
+            <path
+              id="Fond_rond"
+              data-name="Fond rond"
+              d="M0,222.5C0,99.617,99.617,0,222.5,0h0C345.383,0,445,99.617,445,222.5V682H0Z"
+              transform="translate(0 51)"
+              fill="url(#linear-gradient)"
+            />
+            <path
+              id="vagueAccueil1"
+              data-name="Vague Accueil 1"
+              d="M0,733H445V552.5S340.512,510.719,281,532c-79.275,28.347-118.5,95-222.5,82.5C17.664,609.592,0,733,0,733Z"
+              fill="url(#linear-gradient-2)"
+            />
+            <path
+              id="vagueAccueil2"
+              data-name="Vague Accueil 2"
+              d="M445,733H0V523s80.988,75.719,140.5,97c79.275,28.348,161.2-10.348,241,16.5C420.483,649.616,445,733,445,733Z"
+              fill="#fce1cd"
+            />
+            <path
+              id="vagueAccueil3"
+              data-name="Vague Accueil 3"
+              d="M0,733H445V591s-75.988,67.219-135.5,88.5c-79.275,28.348-135.705-20.848-215.5,6C55.017,698.616,0,733,0,733Z"
+              fill="#ffe7d5"
+            />
+          </svg>
+      </div>
         <div class="arrowContainer">
           <a href="#menu">
             <svg
@@ -2900,6 +2903,113 @@
 <script>
 export default {
   mounted: function () {
+  
+    // var test = new Rellax('.rellax');
+
+    //Get actual translate value
+    // function getTranslateValues(element) {
+    //   const matrix =
+    //     element.css("-webkit-transform") ||
+    //     element.css("-moz-transform") ||
+    //     element.css("-ms-transform") ||
+    //     element.css("-o-transform") ||
+    //     element.css("transform");
+
+    //   //If matrix is not defined in css
+    //   if (matrix === "none" || typeof matrix === "undefined") {
+    //     return {
+    //       x: 0,
+    //       y: 0,
+    //       z: 0,
+    //     };
+    //   }
+
+    //   const matrixType = matrix.includes("3d") ? "3d" : "2d";
+    //   const matrixValues = matrix.match(/matrix.*\((.+)\)/)[1].split(", ");
+
+    //   //For translate2d
+    //   if (matrixType === "2d") {
+    //     return {
+    //       x: matrixValues[4],
+    //       y: matrixValues[5],
+    //       z: 0,
+    //     };
+    //   }
+
+    //   //For translate3d
+    //   if (matrixType === "3d") {
+    //     return {
+    //       x: matrixValues[12],
+    //       y: matrixValues[13],
+    //       z: matrixValues[14],
+    //     };
+    //   }
+    // }
+
+    // function applyParallax(element, multiplier) {
+    //   let { x, y, z } = getTranslateValues(element);
+
+    //   let oldValue = 0;
+
+    //   x = parseFloat(x);
+    //   y = parseFloat(y);
+    //   z = parseFloat(z);
+    //   let translateY = y + multiplier;
+
+    //   $(window).scroll(function () {
+    //     let actualValue = $(this).scrollTop();
+    //     if (actualValue > oldValue) {
+    //       translateY = translateY - multiplier;
+    //       console.log(actualValue, oldValue);
+    //       element.css({
+    //         "-webkit-transform": "translate(" + x + "px," + translateY + "px)",
+    //         "-moz-transform": "translate(" + x + "px," + translateY + "px)",
+    //         "-ms-transform": "translate(" + x + "px," + translateY + "px)",
+    //         "-o-transform": "translate(" + x + "px," + translateY + "px)",
+    //         "transform": "translate(" + x + "px," + translateY + "px)",
+    //       });
+    //     } else {
+    //       translateY = translateY + multiplier*1.5;
+    //       console.log(actualValue, oldValue);
+    //       element.css({
+    //         "-webkit-transform": "translate(" + x + "px," + translateY + "px)",
+    //         "-moz-transform": "translate(" + x + "px," + translateY + "px)",
+    //         "-ms-transform": "translate(" + x + "px," + translateY + "px)",
+    //         "-o-transform": "translate(" + x + "px," + translateY + "px)",
+    //         "transform": "translate(" + x + "px," + translateY + "px)",
+    //       });
+    //     }
+    //     oldValue = actualValue;
+    //   });
+    // }
+    // applyParallax($("#svgAccueil"), 0.4);
+
+    // function parallax(element, multiply){
+    //   let position = parseInt( element.css('top').replace(/[^0-9.]/g, "")) * multiply;
+    //   console.log(position);
+    //   $(window).scroll(function(){
+    //     let offset = $(window).scrollTop();
+    //     let remindOffset =0;
+
+    //     if(offset > remindOffset){
+    //       position = parseInt( element.css('top').replace(/[^0-9.]/g, "")) * multiply;
+    //       element.css({
+    //         'top':position + "px",
+    //       })
+    //       remindOffset = offset;
+    //     }else if (offset < remindOffset){
+    //       position = parseInt( element.css('top').replace(/[^0-9.]/g, "")) / multiply;
+    //       element.css({
+    //         'top':position + "px",
+    //       })
+    //       remindOffset = offset;
+    //     }
+    //     console.log(position, offset, remindOffset);
+    //   });
+    // }
+
+    // parallax($("#svgAccueil"), 0.99999);
+
     if (window.outerWidth >= 992) {
       //Hover on homepage's svg
       document
