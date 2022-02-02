@@ -63,12 +63,16 @@ div[class$="Container"] {
   height: 100vh;
 }
 
+.inMobileParallax {
+  transform: scale(1) !important;
+}
+
 /*=====Conditions for ONLY computer screen=====*/
 @media screen and (min-width:992px) {
 
   #Fond_rond:hover,
-  #mainTitle:hover~#svgAccueil #Fond_rond,
-  #name:hover~#svgAccueil #Fond_rond,
+  #mainTitle:hover~#svgAccueilParent #svgAccueil #Fond_rond,
+  #name:hover~#svgAccueilParent #svgAccueil #Fond_rond,
   .fondRondIsHover {
     transform-origin: center;
     transform       : scaleX(1.11) translate(0, 51px);
@@ -77,12 +81,12 @@ div[class$="Container"] {
   #Fond_rond:hover~#vagueAccueil1,
   #Fond_rond:hover~#vagueAccueil2,
   #Fond_rond:hover~#vagueAccueil3,
-  #mainTitle:hover~#svgAccueil #vagueAccueil1,
-  #mainTitle:hover~#svgAccueil #vagueAccueil2,
-  #mainTitle:hover~#svgAccueil #vagueAccueil3,
-  #name:hover~#svgAccueil #vagueAccueil1,
-  #name:hover~#svgAccueil #vagueAccueil2,
-  #name:hover~#svgAccueil #vagueAccueil3,
+  #mainTitle:hover~#svgAccueilParent #svgAccueil #vagueAccueil1,
+  #mainTitle:hover~#svgAccueilParent #svgAccueil #vagueAccueil2,
+  #mainTitle:hover~#svgAccueilParent #svgAccueil #vagueAccueil3,
+  #name:hover~#svgAccueilParent #svgAccueil #vagueAccueil1,
+  #name:hover~#svgAccueilParent #svgAccueil #vagueAccueil2,
+  #name:hover~#svgAccueilParent #svgAccueil #vagueAccueil3,
   #vagueAccueil1:hover,
   #vagueAccueil1:hover~#vagueAccueil2,
   #vagueAccueil1:hover~#vagueAccueil3,
@@ -181,18 +185,18 @@ div[class$="Container"] {
 }
 
 /*====SVG animation in the mediaqueries line 54=====*/
-#svgAccueilParent{
+#svgAccueilParent {
   z-index  : 0;
-  position: absolute;
-  width: 100%;
+  position : absolute;
+  width    : 100%;
   top      : 50%;
-  left     : 50%;  
+  left     : 50%;
   transform: translate(-48%, -57%);
 }
 
 #svgAccueil {
-  z-index  : 0;
-  width    : 100vw;
+  z-index: 0;
+  width  : 100vw;
 }
 
 #svgAccueil * {
@@ -442,6 +446,7 @@ div.aboutmeSubContainer {
   margin     : 0 auto 0 30vw;
   padding-top: 5%;
   position   : relative;
+  z-index    : 200;
   left       : -1%;
 }
 
@@ -450,7 +455,7 @@ div.aboutmeSubContainer {
   z-index    : 200;
   font-size  : 10vh;
   font-weight: 100;
-  top        : 6vh;
+  top        : 35vh;
 }
 
 div.aboutImgContainer {
@@ -518,71 +523,121 @@ p.aboutText:nth-of-type(4) {
 
 
 .designSubContainer {
-  width          : 80vw;
-  max-height     : 50vh;
-  margin         : 0 auto;
-  display        : flex;
-  justify-content: space-evenly;
+  width     : 80vw;
+  max-height: 50vh;
+  margin    : 0 10%;
 }
 
-.designTitleContainer {
-  max-height: 8vh;
+div.designTitleContainer {
+  height: fit-content;
   width     : 30vw;
+  margin    : 2% 0 3% 0;
 }
 
 .designTitle {
-  font-size  : 2.5vw;
+  font-size  : 4.5rem;
   font-weight: 100;
   color      : #5F563F;
 }
 
 .designFlexRight,
 .designFlexLeft {
-  width     : 35vw;
-  max-height: 40vh;
+  width : 35vw;
+  height: 40vh;
 }
 
 .designFlexRight {
-  margin-top: 50px;
-  transform : translateX(-7vw);
+  padding-left: 5%;
 }
 
-.designCarouselContainer {
+.designFlexLeft {
+  display        : flex;
+  justify-content: center;
+}
+
+div.designCarouselContainer {
   max-height: 30vh;
-  width     : fit-content;
+  width     : 70vw;
 }
 
-.carousel-indicators {
-  transform: translate(-46vw, 5vh);
+.carouselFlex {
+  display: flex;
+  width  : fit-content;
 }
 
-.synergImg {
-  width: 35%;
+ul.carousel-indicators {
+  /* justify-content: start; */
+  bottom     : -12%;
+  margin-left: 0;
+  width      : 35vw;
 }
 
-.projectDesignTitleContainer {
-  max-height: 3vh;
-  font-size : 1.77vw;
+.carousel-indicators li {
+  border       : none;
+  border-radius: 5px;
+  height       : 10px;
+  width        : 13%;
+  margin-left  : 6px;
+  margin-right : 6px;
+  transition   : height 0.03s;
+}
+
+.carousel-indicators li.active {
+  height: 18px;
+}
+
+.carousel-control-next-icon {
+  background-image: none;
+  height          : fit-content;
+}
+
+.carousel-control-next {
+  opacity: 1;
+  top    : 57%;
+  left   : 51.5%;
+  height : fit-content;
+}
+
+.carouselImg {
+  max-width: 100%;
+  height   : 100%;
+}
+
+.whiteArrow {
+  width : 50%;
+  cursor: pointer;
+}
+
+
+div.projectDesignTitleContainer {
+  height   : fit-content;
+  font-size: 1.77vw;
 }
 
 h3.projectDesignTitle {
   color      : #5F563F;
   font-weight: 100;
+  font-size  : 4rem;
 }
 
 .projectDesignText {
-  color    : var(--fontColor1);
-  font-size: 1.3vw;
+  color        : #FFE7D4;
+  font-size    : 1.5rem;
+  overflow-wrap: break-word;
+  overflow     : visible;
+  width        : fit-content;
+  display      : inline-block;
+  white-space  : normal;
 }
 
-.whiteArrow {
-  width : 15%;
-  cursor: pointer;
+#flowerParent1 {
+  position: relative;
+  z-index : 500;
 }
 
 #flower1 {
   bottom   : 0;
-  transform: translate(-30%, 50%) scaleX(-1);
+  transform: translate(-30%, 430%) scaleX(-1);
   position : absolute;
   z-index  : 500;
 }
@@ -757,7 +812,7 @@ div.contactTitleContainer {
 
 @keyframes liquid1 {
   0% {
-    opacity: 0;
+    opacity  : 0;
     transform: translate(0, -10%);
   }
 
@@ -766,14 +821,14 @@ div.contactTitleContainer {
   }
 
   100% {
-    opacity: 0;
+    opacity  : 0;
     transform: translate(0, 90%);
   }
 }
 
 @keyframes liquid2 {
   0% {
-    opacity: 0;
+    opacity  : 0;
     transform: translate(0, -10%);
   }
 
@@ -782,14 +837,14 @@ div.contactTitleContainer {
   }
 
   100% {
-    opacity: 0;
+    opacity  : 0;
     transform: translate(0, 90%);
   }
 }
 
 @keyframes liquid3 {
   0% {
-    opacity: 0;
+    opacity  : 0;
     transform: translate(0, -40%);
   }
 
@@ -798,29 +853,29 @@ div.contactTitleContainer {
   }
 
   100% {
-    opacity: 0;
+    opacity  : 0;
     transform: translate(0, 70%);
   }
 }
 
 
-#liquid1{
+#liquid1 {
   animation-name           : liquid1;
   animation-duration       : 4s;
-  animation-delay: 0.8s;
+  animation-delay          : 0.8s;
   animation-iteration-count: infinite;
   animation-timing-function: linear;
 }
 
-#liquid2{
+#liquid2 {
   animation-name           : liquid2;
-  animation-delay: 0.5s;
+  animation-delay          : 0.5s;
   animation-duration       : 4s;
   animation-iteration-count: infinite;
   animation-timing-function: linear;
 }
 
-#liquid3{
+#liquid3 {
   animation-name           : liquid3;
   animation-duration       : 4s;
   animation-iteration-count: infinite;
@@ -876,8 +931,8 @@ div.contactTitleContainer {
   }
 
   .contactPolygon {
-    width          : 55vw;
-  }  
+    width: 55vw;
+  }
 
   #citron2 {
     bottom: -3%;
@@ -924,9 +979,12 @@ div.contactTitleContainer {
     font-size  : 1rem;
   }
 
+  #svgAccueilParent {
+    transform: translate(-48%, -50%);
+  }
+
   #svgAccueil {
-    width    : 45vw;
-    transform: translate(-43%, -50%);
+    width: 45vw;
   }
 
   .mainTitle {
@@ -1023,9 +1081,8 @@ div.contactTitleContainer {
   }
 
   #flower1 {
-    top      : -10%;
-    left     : 80%;
-    transform: scale(1);
+    position : absolute;
+    transform: translate(80vw, 50%) scale(1);
   }
 
   div.contactContainer {
@@ -1075,9 +1132,12 @@ div.contactTitleContainer {
     height: 93vh;
   }
 
+  #svgAccueilParent {
+    transform: translate(-45%, -50%);
+  }
+
   #svgAccueil {
-    width    : 55vw;
-    transform: translate(-43%, -50%);
+    width: 55vw;
   }
 
   .mainTitle {
@@ -1091,7 +1151,7 @@ div.contactTitleContainer {
   }
 
   .arrowContainer a {
-    margin: 15vh 0 0 0;
+    margin: 30vh 0 0 0;
   }
 
   .treeMenuParent #treeMenu {
@@ -1243,9 +1303,8 @@ div.contactTitleContainer {
   }
 
   #flower1 {
-    width: 200px;
-    top  : -10%;
-    left : 74%;
+    width    : 200px;
+    transform: translate(70vw, 50%) scale(0.8);
   }
 
   div.contactContainer {
@@ -1273,7 +1332,7 @@ div.contactTitleContainer {
 
   #citron2 {
     width: 100px;
-    left: 3%;
+    left : 3%;
   }
 
 }
@@ -1309,9 +1368,8 @@ div.contactTitleContainer {
   }
 
   #flower1 {
-    width: 150px;
-    top  : -10%;
-    left : 70%;
+    width    : 150px;
+    transform: translate(70vw, 50%) scale(0.6);
   }
 
 
@@ -1352,7 +1410,7 @@ div.contactTitleContainer {
     left : 82%;
   }
 
-  #citron2{
+  #citron2 {
     width: 80px;
   }
 
@@ -1360,9 +1418,12 @@ div.contactTitleContainer {
 
 @media screen and (max-width:320px) {
 
-  #svgAccueil {
-    width    : 70vw;
+  #svgAccueilParent {
     transform: translate(-42%, -50%);
+  }
+
+  #svgAccueil {
+    width: 70vw;
   }
 
   div.menuContainer {
