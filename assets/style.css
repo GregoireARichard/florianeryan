@@ -54,8 +54,8 @@ p {
 
 *::selection,
 *::-moz-selection {
-  background-color: rgb(255, 237, 224);
-  color           : #5F563F;
+  background-color: rgb(255, 237, 224) !important;
+  color           : #5F563F !important;
 }
 
 div[class$="Container"] {
@@ -566,7 +566,6 @@ div.designCarouselContainer {
 }
 
 ul.carousel-indicators {
-  /* justify-content: start; */
   bottom     : -12%;
   margin-left: 0;
   width      : 35vw;
@@ -591,11 +590,23 @@ ul.carousel-indicators {
   height          : fit-content;
 }
 
-.carousel-control-next {
+.carousel-control-next{
   opacity: 1;
-  top    : 57%;
+  top    : 70%;
   left   : 51.5%;
   height : fit-content;
+}
+
+.carousel-control-next #whietArrowPath1, .carousel-control-next #whietArrowPath2{
+  transition: all 0.7s;
+}
+
+.carousel-control-next:hover #whietArrowPath1{
+  transform: scaleX(1.2);
+}
+
+.carousel-control-next:hover #whietArrowPath2{
+  transform: translateX(12%);
 }
 
 .carouselImg {
@@ -604,10 +615,9 @@ ul.carousel-indicators {
 }
 
 .whiteArrow {
-  width : 50%;
+  width : 70%;
   cursor: pointer;
 }
-
 
 div.projectDesignTitleContainer {
   height   : fit-content;

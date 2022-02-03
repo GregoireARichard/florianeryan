@@ -1045,7 +1045,7 @@
             <h2 class="designTitle">{{ $t("navbar_des") }}</h2>
           </div>
           <div class="designCarouselContainer" id="designCarouselContainer">
-            <div id="demo" class="carousel slide" data-ride="carousel">
+            <div id="carousel1" class="carousel slide" data-ride="carousel">
               <!-- Indicators -->
               <ul class="carousel-indicators">
                 <li data-target="#demo" data-slide-to="0" class="active"></li>
@@ -1188,7 +1188,7 @@
               </div>
               <a
                 class="carousel-control-next"
-                href="#demo"
+                href="#carousel1"
                 role="button"
                 data-slide="next"
               >
@@ -1197,14 +1197,16 @@
                   aria-hidden="true"
                   width="252"
                   height="79"
-                  viewBox="0 0 252 79"
+                  viewBox="0 0 252 100"
                   fill="none"
                 >
                   <path
+                    id="whietArrowPath2"
                     d="M251.107 39.5L191.857 73.708L191.857 5.29199L251.107 39.5Z"
                     fill="white"
                   />
                   <path
+                    id="whietArrowPath1"
                     d="M191.857 39.5L-1.63913e-05 39.5"
                     stroke="white"
                     stroke-width="3"
