@@ -672,7 +672,7 @@
     <div class="aboutContainer" id="aboutContainer">
       <Navbar />
       <div class="aboutmeSubContainer">
-        <div class="aboutmeTitleContainer rellax" v-rellax="{ speed: 1.5 }">
+        <div class="aboutmeTitleContainer">
           <h2 class="aboutmeTitle">{{ $t("about_me") }}</h2>
         </div>
         <div class="aboutmeFlexContainer">
@@ -914,7 +914,7 @@
           fill="#E3C7B2"
         />
       </svg>
-      <div id="flowerParent1" class="rellax" v-rellax="{ speed: 1.5 }">
+      <div id="flowerParent1" >
         <svg
           width="234"
           height="262"
@@ -2146,64 +2146,148 @@
 
     <div class="motionDesignContainer" id="motionDesignContainer">
       <div class="designSubContainer">
-        <div class="designFlexLeft flexLeftMotion">
-          <div class="projectDesignTitleContainer">
-            <h3 class="projectDesignTitle">Blossoming agency</h3>
-          </div>
-          <p class="projectDesignText">{{ $t("blossom_text") }} <br /></p>
-
-          <img
-            :src="require('../assets/img/brownarrow.png')"
-            alt="whiteArrow"
-            class="whiteArrow"
-          />
-        </div>
-        <div class="designFlexRight">
+        <div class="">
           <div class="designTitleContainer motionTitleContainer">
-            <h2 class="designTitle">{{ $t("navbar_motion") }}</h2>
+            <h2 class="designTitle motionTitle">{{ $t("navbar_motion") }}</h2>
           </div>
-          <div class="designCarouselContainer">
+          <div class="designCarouselContainer" id="designCarouselContainer">
             <div id="carousel2" class="carousel slide" data-ride="carousel">
               <!-- Indicators -->
-              <ul class="carousel-indicators">
-                <li
-                  data-target="#carousel2"
-                  data-slide-to="0"
-                  class="active"
-                ></li>
-                <li data-target="#carousel2" data-slide-to="1"></li>
-                <li data-target="#carousel2" data-slide-to="2"></li>
+              <ul class="carousel-indicators carousel-indicators-motion">
+                <li data-target="#demo" data-slide-to="0" class="active"></li>
+                <li data-target="#demo" data-slide-to="1"></li>
+                <li data-target="#demo" data-slide-to="2"></li>
+                <li data-target="#demo" data-slide-to="3"></li>
               </ul>
 
               <!-- The slideshow -->
               <div class="carousel-inner">
                 <div class="carousel-item active">
-                  <img
-                    :src="require('../assets/img/thumbnail.png')"
-                    alt="synerg pic"
-                    class="carouselImg"
-                  />
+                  <div class="carouselFlex carouselFlexMotion">
+                    <div class="designFlexLeft">
+                      <a href="https://youtu.be/OksYdPDb_MI" target="_blank">
+                        <img
+                          :src="require('../assets/img/thumbnail.png')"
+                          alt="synerg pic"
+                          class="carouselImg"
+                        />
+                      </a>
+                    </div>
+                    <div class="designFlexRight">
+                      <div class="projectDesignTitleContainer projectMotionTitleContainer">
+                        <h3 class="projectDesignTitle">
+                          {{ $t("blossom_title") }}
+                        </h3>
+                      </div>
+                      <p class="projectDesignText projectMotionText">
+                        {{ $t("blossom_text") }}
+                      </p>
+                    </div>
+                  </div>
                 </div>
                 <div class="carousel-item">
-                  <img
-                    :src="require('../assets/img/synerg.png')"
-                    alt="synerg pic"
-                    class="carouselImg"
-                  />
+                  <div class="carouselFlex carouselFlexMotion">
+                    <div class="designFlexLeft">
+                      <a href="https://youtu.be/hR0_8UJ2peQ" target="_blank">
+                        <img
+                          :src="require('../assets/img/thumbnail.png')"
+                          alt="clothing pic"
+                          class="carouselImg"
+                        />
+                      </a>
+                    </div>
+                    <div class="designFlexRight">
+                      <div class="projectDesignTitleContainer projectMotionTitleContainer">
+                        <h3 class="projectDesignTitle">
+                          {{ $t("catapulz_title") }}
+                        </h3>
+                      </div>
+                      <p class="projectDesignText projectMotionText">
+                        {{ $t("catapulz_text") }}
+                      </p>
+                    </div>
+                  </div>
                 </div>
                 <div class="carousel-item">
-                  <img
-                    :src="require('../assets/img/synerg.png')"
-                    alt="synerg pic"
-                    class="carouselImg"
-                  />
+                  <div class="carouselFlex carouselFlexMotion">
+                    <div class="designFlexLeft">
+                      <a href="https://youtu.be/bSfSX3n8jkU" target="_blank">
+                        <img
+                          :src="require('../assets/img/thumbnail.png')"
+                          alt="netflix poster pic"
+                          class="carouselImg"
+                        />
+                      </a>
+                    </div>                  
+                    <div class="designFlexRight">
+                      <div class="projectDesignTitleContainer projectMotionTitleContainer">
+                        <h3 class="projectDesignTitle ">
+                          {{ $t("cajoo_title") }}
+                        </h3>
+                      </div>
+                      <p class="projectDesignText projectMotionText">
+                        {{ $t("cajoo_text") }}
+                      </p>
+                    </div>
+                  </div>
+                </div>
+                <div class="carousel-item">
+                  <div class="carouselFlex carouselFlexMotion">
+                    <div class="designFlexLeft">
+                      <a href="https://youtu.be/1ZvTsY2JIKs" target="_blank">
+                        <img
+                          :src="require('../assets/img/thumbnail.png')"
+                          alt="instagram feed pic"
+                          class="carouselImg"
+                        />
+                      </a>
+                    </div>
+                    <div class="designFlexRight">
+                      <div class="projectDesignTitleContainer projectMotionTitleContainer">
+                        <h3 class="projectDesignTitle ">
+                          {{ $t("citwell_title") }}
+                        </h3>
+                      </div>
+                      <p class="projectDesignText projectMotionText">
+                        {{ $t("citwell_text1") }} <br />
+                        {{ $t("citwell_text2") }}
+                      </p>
+                    </div>
+                  </div>
                 </div>
               </div>
-
+              <a
+                class="carousel-control-next motionControlNext"
+                href="#carousel2"
+                role="button"
+                data-slide="next"
+              >
+                <svg
+                  class="whiteArrow carousel-control-next-icon"
+                  aria-hidden="true"
+                  width="252"
+                  height="79"
+                  viewBox="0 0 252 100"
+                  fill="none"
+                >
+                  <path
+                    id="whietArrowPath2"
+                    d="M251.107 39.5L191.857 73.708L191.857 5.29199L251.107 39.5Z"
+                    fill="white"
+                  />
+                  <path
+                    id="whietArrowPath1"
+                    d="M191.857 39.5L-1.63913e-05 39.5"
+                    stroke="white"
+                    stroke-width="3"
+                  />
+                </svg>
+              </a>
               <!-- Left and right controls -->
             </div>
           </div>
         </div>
+
       </div>
       <svg
         width="1441"
