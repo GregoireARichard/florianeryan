@@ -36,6 +36,12 @@ body {
   background-color: var(--mainColor);
 }
 
+.allParent {
+  display       : flex;
+  flex-direction: column;
+  overflow      : hidden;
+}
+
 h2,
 h3 {
   font-family: 'Casta', sans-serif;
@@ -46,17 +52,31 @@ p {
   font-family: 'Quicksand', sans-serif;
 }
 
+*::selection {
+  background-color: rgb(255, 237, 224) !important;
+  color           : #5F563F !important;
+}
+
+*::-moz-selection {
+  background-color: rgb(255, 237, 224) !important;
+  color           : #5F563F !important;
+}
+
 div[class$="Container"] {
   width : 100vw;
   height: 100vh;
+}
+
+.inMobileParallax {
+  transform: scale(1) !important;
 }
 
 /*=====Conditions for ONLY computer screen=====*/
 @media screen and (min-width:992px) {
 
   #Fond_rond:hover,
-  #mainTitle:hover~#svgAccueil #Fond_rond,
-  #name:hover~#svgAccueil #Fond_rond,
+  #mainTitle:hover~#svgAccueilParent #svgAccueil #Fond_rond,
+  #name:hover~#svgAccueilParent #svgAccueil #Fond_rond,
   .fondRondIsHover {
     transform-origin: center;
     transform       : scaleX(1.11) translate(0, 51px);
@@ -65,12 +85,12 @@ div[class$="Container"] {
   #Fond_rond:hover~#vagueAccueil1,
   #Fond_rond:hover~#vagueAccueil2,
   #Fond_rond:hover~#vagueAccueil3,
-  #mainTitle:hover~#svgAccueil #vagueAccueil1,
-  #mainTitle:hover~#svgAccueil #vagueAccueil2,
-  #mainTitle:hover~#svgAccueil #vagueAccueil3,
-  #name:hover~#svgAccueil #vagueAccueil1,
-  #name:hover~#svgAccueil #vagueAccueil2,
-  #name:hover~#svgAccueil #vagueAccueil3,
+  #mainTitle:hover~#svgAccueilParent #svgAccueil #vagueAccueil1,
+  #mainTitle:hover~#svgAccueilParent #svgAccueil #vagueAccueil2,
+  #mainTitle:hover~#svgAccueilParent #svgAccueil #vagueAccueil3,
+  #name:hover~#svgAccueilParent #svgAccueil #vagueAccueil1,
+  #name:hover~#svgAccueilParent #svgAccueil #vagueAccueil2,
+  #name:hover~#svgAccueilParent #svgAccueil #vagueAccueil3,
   #vagueAccueil1:hover,
   #vagueAccueil1:hover~#vagueAccueil2,
   #vagueAccueil1:hover~#vagueAccueil3,
@@ -79,7 +99,7 @@ div[class$="Container"] {
   #vagueAccueil3:hover,
   .vagueIsHover {
     transform-origin: center;
-    transform       : scale(1.11, 1.4) translate(0, -105px);
+    transform       : scale(1.11, 1.4) translate(0, -67px);
   }
 
   /* Animation menu tree */
@@ -147,6 +167,7 @@ div[class$="Container"] {
 .fullPotentialParent {
   display   : none;
   text-align: center;
+  margin-top: 3%;
 }
 
 .titlesContainer {
@@ -168,13 +189,18 @@ div[class$="Container"] {
 }
 
 /*====SVG animation in the mediaqueries line 54=====*/
-#svgAccueil {
+#svgAccueilParent {
   z-index  : 0;
   position : absolute;
-  width    : 100vw;
+  width    : 100%;
   top      : 50%;
   left     : 50%;
-  transform: translate(-48%, -57%);
+  transform: translate(-48%, -40%) scale(1.3);
+}
+
+#svgAccueil {
+  z-index: 0;
+  width  : 100vw;
 }
 
 #svgAccueil * {
@@ -186,17 +212,16 @@ div[class$="Container"] {
   text-transform: uppercase;
   font-size     : 8vw;
   font-weight   : 100;
-  margin        : 100px 0;
+  margin        : 100px 0 0 0;
   width         : fit-content;
 }
 
 .name {
-  color        : var(--fontColor4);
-  font-size    : 9vw;
-  font-weight  : 100;
-  margin       : 0;
-  margin-bottom: 7%;
-  width        : fit-content;
+  color      : var(--fontColor4);
+  font-size  : 9vw;
+  font-weight: 100;
+  margin     : 0;
+  width      : fit-content;
 }
 
 .header {
@@ -215,7 +240,7 @@ div.arrowContainer {
 }
 
 .arrowContainer a {
-  margin: 25vh 0 0 0;
+  margin: 16vh 0 0 0;
 }
 
 .arrow {
@@ -241,6 +266,48 @@ div.arrowContainer {
 
   100% {
     transform: translate(0, 0px);
+  }
+}
+
+@keyframes floatingBis {
+  0% {
+    transform: translate(0, 10px);
+  }
+
+  50% {
+    transform: translate(0, 0px);
+  }
+
+  100% {
+    transform: translate(0, 10px);
+  }
+}
+
+@keyframes floating2 {
+  0% {
+    transform: translate(0, 0px);
+  }
+
+  50% {
+    transform: translate(0, 20px);
+  }
+
+  100% {
+    transform: translate(0, 0px);
+  }
+}
+
+@keyframes floating3 {
+  0% {
+    transform: translate(0, 20px);
+  }
+
+  50% {
+    transform: translate(0, 0px);
+  }
+
+  100% {
+    transform: translate(0, 20px);
   }
 }
 
@@ -294,23 +361,23 @@ div.menuContainer {
 /* ====Animation in the upper media queries==== */
 
 #treeMenuText1 {
-  top : 335px;
+  top : 360px;
   left: 415px;
 }
 
 #treeMenuText2 {
-  top : 225px;
-  left: 560px;
+  top : 253px;
+  left: 550px;
 }
 
 #treeMenuText3 {
-  top : 170px;
+  top : 195px;
   left: 275px;
 }
 
 #treeMenuText4 {
-  top : 364px;
-  left: 60px;
+  top : 390px;
+  left: 65px;
 }
 
 a {
@@ -342,17 +409,26 @@ a {
   font-size : 1.5rem;
   text-align: center;
   display   : flex;
+  transition: all 0.7s;
 }
 
 span.dots {
   font-size  : 1.5rem;
   color      : #fff;
   font-family: "Quicksand", sans-serif;
+  transition : all 0.7s;
 }
 
 .isSticky {
-  position: fixed;
-  top     : 0;
+  position   : fixed;
+  left       : 50%;
+  transform  : translateX(-50%);
+  margin-left: 7.5px;
+}
+
+.navbarLink.isColorized,
+.dots.isColorized {
+  color: var(--fontColor5);
 }
 
 .isVisible {
@@ -374,6 +450,7 @@ div.aboutmeSubContainer {
   margin     : 0 auto 0 30vw;
   padding-top: 5%;
   position   : relative;
+  z-index    : 200;
   left       : -1%;
 }
 
@@ -382,7 +459,7 @@ div.aboutmeSubContainer {
   z-index    : 200;
   font-size  : 10vh;
   font-weight: 100;
-  top        : 90%;
+  top        : 3.5vh;
 }
 
 div.aboutImgContainer {
@@ -443,119 +520,419 @@ p.aboutText:nth-of-type(4) {
   top     : 70%;
 }
 
-.designContainer {
+div.designContainer {
   background-color: var(--backColor4);
+  position        : relative;
+  height          : 110vh;
 }
 
-.motionDesignContainer,
-.contactContainer {
-  background-color: var(--backColor3);
-}
 
 .designSubContainer {
-  width          : 80vw;
-  max-height     : 50vh;
-  margin         : 0 auto;
-  display        : flex;
-  justify-content: space-evenly;
+  width     : 80vw;
+  max-height: 50vh;
+  margin    : 0 10%;
 }
 
-.designTitleContainer {
-  max-height: 8vh;
-  width     : 30vw;
+div.designTitleContainer {
+  height: fit-content;
+  width : 80vw;
+  margin: 2% 0 3% 0;
 }
 
 .designTitle {
-  font-size: 2.5vw;
+  font-size  : 4.5rem;
+  font-weight: 100;
+  color      : #5F563F;
 }
 
 .designFlexRight,
 .designFlexLeft {
-  width     : 35vw;
-  max-height: 40vh;
+  width : 35vw;
+  height: 40vh;
 }
 
 .designFlexRight {
-  margin-top: 50px;
-  transform : translateX(-7vw);
+  padding-left: 5%;
 }
 
-.designCarouselContainer {
+.designFlexLeft {
+  display        : flex;
+  justify-content: center;
+}
+
+div.designCarouselContainer {
   max-height: 30vh;
-  width     : fit-content;
+  width     : 80vw;
 }
 
-.synergImg {
-  width: 35%;
+.carouselFlex {
+  display: flex;
+  width  : fit-content;
+  margin: 0;
 }
 
-.projectDesignTitleContainer {
-  max-height: 3vh;
-  font-size : 1.77vw;
+div.projectMotionTitleContainer{
+  width: 30vw;
 }
 
-.projectDesignText {
-  color    : var(--fontColor1);
-  font-size: 1.3vw;
+ul.carousel-indicators {
+  bottom     : -12%;
+  margin-left: 0;
+  width      : 35vw;
+  z-index    : 999;
+}
+
+.carousel-indicators li {
+  border       : none;
+  border-radius: 5px;
+  height       : 10px;
+  width        : 13%;
+  margin-left  : 6px;
+  margin-right : 6px;
+  transition   : height 0.03s;
+}
+
+.carousel-indicators li.active {
+  height: 18px;
+}
+
+.carousel-control-next-icon {
+  background-image: none;
+  height          : fit-content;
+}
+
+.carousel-control-next {
+  opacity: 1;
+  top    : 70%;
+  left   : 45%;
+  height : fit-content;
+}
+
+.carousel-control-next #whietArrowPath1,
+.carousel-control-next #whietArrowPath2 {
+  transition: all 0.7s;
+}
+
+.carousel-control-next:hover #whietArrowPath1 {
+  transform: scaleX(1.2);
+}
+
+.carousel-control-next:hover #whietArrowPath2 {
+  transform: translateX(12%);
+}
+
+.carouselImg {
+  max-width: 100%;
 }
 
 .whiteArrow {
-  width : 15%;
+  width : 70%;
   cursor: pointer;
 }
 
+div.projectDesignTitleContainer {
+  height   : fit-content;
+  font-size: 1.77vw;
+}
+
+h3.projectDesignTitle {
+  color      : #5F563F;
+  font-weight: 100;
+  font-size  : 4rem;
+  width: fit-content;
+}
+
+.projectDesignText {
+  color        : #FFE7D4;
+  font-size    : 1.5rem;
+  overflow-wrap: break-word;
+  overflow     : visible;
+  width        : fit-content;
+  display      : inline-block;
+  white-space  : normal;
+}
+
+#flowerParent1 {
+  position: relative;
+  z-index : 500;
+}
+
+#flower1 {
+  bottom   : 0;
+  transform: translate(-30%, 380%) scaleX(-1);
+  position : absolute;
+  z-index  : 500;
+}
+
+#designDivider {
+  position: absolute;
+  display : block;
+  width   : calc(100% + 1.3px);
+  height  : fit-content;
+  bottom  : -2%;
+}
+
+.motionDesignContainer,
+.contactContainer{
+  background-color: var(--backColor3);
+}
+
+.carousel{
+  display: flex;
+}
+
+.carousel-item{
+  width: fit-content;
+}
+
 .motionTitleContainer {
-  max-width : 35vw;
   text-align: right;
+  width: fit-content;
+}
+
+.motionControlNext{
+  left: 1%;
+  top: 75%;
+}
+
+.motionDesignContainer .designTitle{
+  margin-right: 12%;
+}
+
+.projectMotionText {
+  color:   var(--fontColor5) ;
+}
+
+.carouselFlexMotion{
+  flex-direction: row-reverse;
+}
+
+.carousel-indicators-motion{
+  left: auto;
+  margin-right: 12%;
+}
+
+div.motionDesignContainer {
+  position: relative;
+  height: 110vh;
 }
 
 .flexLeftMotion {
   margin-top: 105px;
 }
 
-.contactTitleContainer {
-  max-height: 5vh;
-  width     : 20vw;
-  font-size : 2vw;
-  text-align: center;
-  transform : translate(-200px, 190px);
+#motionDivider {
+  position: absolute;
+  display : block;
+  width   : calc(100% + 1.3px);
+  height  : fit-content;
+  bottom  : -30%;
+  z-index : 200;
+}
+
+div.contactContainer {
+  position: relative;
+  height  : 110vh;
+}
+
+#contactContent {
+  position       : relative;
+  z-index        : 5;
+  width          : 100%;
+  height         : 100%;
+  display        : flex;
+  flex-direction : column;
+  justify-content: center;
+  align-items    : center;
+}
+
+div.contactTitleContainer {
+  max-height   : 5vh;
+  width        : 100%;
+  margin-bottom: 3%;
+}
+
+.contactTitle {
+  font-size: 4.5rem;
+  color    : #5F563F;
+  position : relative;
+  width    : fit-content;
+  left     : 20%;
 }
 
 .contactPolygon {
-  width : 30vw;
-  height: 10vw;
-  margin: 30vh auto 0 auto;
-}
-
-.rountPart,
-.squarePart {
-  width     : 30vw;
-  height    : 5vw;
-  background: var(--mainColor);
-  text-align: center;
-}
-
-.rountPart {
-  border-radius: 30px;
-}
-
-.squarePart {
-  transform: translateY(-40px);
+  width          : 45vw;
+  height         : fit-content;
+  display        : flex;
+  position       : relative;
+  z-index        : 5;
+  flex-direction : column;
+  justify-content: center;
+  align-items    : center;
+  background     : var(--mainColor);
+  border-radius  : 96px 96px 0 0;
 }
 
 .contactme {
   color      : var(--fontColor1);
-  padding-top: 10px;
-  font-size  : 12px;
+  padding-top: 30px;
+  font-size  : 1.5rem;
+  text-align : center;
 }
 
 .mailAdress {
   font-family: 'Casta', sans-serif;
+  font-size  : 2.75rem;
+  font-weight: 100;
+  color      : #5F563F;
+  text-align : center;
+}
+
+#iconeContainer {
+  display        : flex;
+  justify-content: space-evenly;
+  width          : 20%;
+  margin         : 3% 0 5% 0;
 }
 
 .icons {
-  width        : 5%;
   padding-right: 5px;
+}
+
+.social {
+  width: fit-content;
+}
+
+.cvDownloadParent {
+  width          : 20vw;
+  display        : flex;
+  flex-direction : column;
+  justify-content: center;
+  align-items    : center;
+  margin-top     : 30px;
+  padding        : 10px 0 7px 0;
+  background     : var(--mainColor);
+  border-radius  : 0 0 65px 65px;
+}
+
+.cvDownloadParent a {
+  font-family    : 'Quicksand', sans-serif;
+  font-size      : 1.5rem;
+  text-decoration: underline;
+  color          : #806857;
+}
+
+.cvDownloadParent p {
+  text-align: center;
+  font-size : 1.5rem;
+  margin    : 0;
+  color     : #806857;
+}
+
+#contactDivider {
+  position  : absolute;
+  z-index   : 0;
+  width     : calc(100% + 1.3px);
+  height    : fit-content;
+  bottom    : -25px;
+  overflow-y: hidden;
+}
+
+#citron1 {
+  width                    : 200px;
+  position                 : absolute;
+  z-index                  : 0;
+  top                      : 30%;
+  left                     : 69%;
+  animation-name           : floating2;
+  animation-duration       : 3s;
+  animation-iteration-count: infinite;
+  animation-timing-function: ease-in-out;
+}
+
+#citron2 {
+  position                 : absolute;
+  z-index                  : 10;
+  bottom                   : -3%;
+  left                     : 15%;
+  width                    : 300px;
+  height                   : fit-content;
+  animation-name           : floating3;
+  animation-duration       : 3s;
+  animation-iteration-count: infinite;
+  animation-timing-function: ease-in-out;
+}
+
+@keyframes liquid1 {
+  0% {
+    opacity  : 0;
+    transform: translate(0, -10%);
+  }
+
+  40% {
+    opacity: 0.8;
+  }
+
+  100% {
+    opacity  : 0;
+    transform: translate(0, 90%);
+  }
+}
+
+@keyframes liquid2 {
+  0% {
+    opacity  : 0;
+    transform: translate(0, -10%);
+  }
+
+  5% {
+    opacity: 0.8;
+  }
+
+  100% {
+    opacity  : 0;
+    transform: translate(0, 90%);
+  }
+}
+
+@keyframes liquid3 {
+  0% {
+    opacity  : 0;
+    transform: translate(0, -40%);
+  }
+
+  30% {
+    opacity: 0.8;
+  }
+
+  100% {
+    opacity  : 0;
+    transform: translate(0, 70%);
+  }
+}
+
+
+#liquid1 {
+  animation-name           : liquid1;
+  animation-duration       : 4s;
+  animation-delay          : 0.8s;
+  animation-iteration-count: infinite;
+  animation-timing-function: linear;
+}
+
+#liquid2 {
+  animation-name           : liquid2;
+  animation-delay          : 0.5s;
+  animation-duration       : 4s;
+  animation-iteration-count: infinite;
+  animation-timing-function: linear;
+}
+
+#liquid3 {
+  animation-name           : liquid3;
+  animation-duration       : 4s;
+  animation-iteration-count: infinite;
+  animation-timing-function: linear;
 }
 
 @media screen and (max-width:1440px) {
@@ -569,12 +946,14 @@ p.aboutText:nth-of-type(4) {
   }
 
   .aboutmeTitleContainer {
-    margin: 0 auto 0 35vw;
-    top   : 8%;
+    margin     : 0 auto 0 35vw;
+    padding-top: 14%;
+    top        : 8%;
   }
 
   .aboutmeTitle {
     font-size: 5rem;
+    top      : 2.5vh;
   }
 
   .aboutmeSubContainer {
@@ -583,6 +962,20 @@ p.aboutText:nth-of-type(4) {
 
   #decorationTree1 {
     left: -20.5%;
+  }
+
+  h3.projectDesignTitle {
+    font-size  : 3rem;
+  }
+
+  .contactTitle {
+    left: 15%;
+  }
+
+  #citron2 {
+    bottom: -3%;
+    left  : 13%;
+    width : 250px;
   }
 
 }
@@ -594,11 +987,31 @@ p.aboutText:nth-of-type(4) {
     width: 500px;
   }
 
+  .contactPolygon {
+    width: 55vw;
+  }
+
+  .designFlexRight {
+    width : 30vw;
+    height: 40vh;
+  }  
+
+  #citron2 {
+    bottom: -3%;
+    left  : 15%;
+    width : 200px;
+  }
+
 }
 
 @media screen and (min-width:992px) and (max-height:900px) {
   #svgAccueil {
     width: 30vw;
+  }
+
+  #svgAccueilParent{
+    transform: translate(-48%, -55%) scale(1);
+    height: 80vh;
   }
 
   div.aboutImgContainer {
@@ -607,6 +1020,34 @@ p.aboutText:nth-of-type(4) {
 
   .aboutmeSubContainer {
     height: 100vh;
+  }
+
+  #navbar {
+    margin-top: 60px;
+  }
+
+  div.designContainer {
+    height: 140vh;
+  }
+
+  ul.carousel-indicators{
+    bottom: -35%;
+  }
+
+  div.motionDesignContainer{
+    height: 120vh;
+  }
+
+  .carousel-control-next{
+    top: 85%;
+  }
+
+  .motionControlNext{
+    top: 90%;
+  }
+
+  div.contactContainer{
+    height: 130vh;
   }
 
 }
@@ -629,14 +1070,17 @@ p.aboutText:nth-of-type(4) {
     font-size  : 1rem;
   }
 
+  #svgAccueilParent {
+    transform: translate(-48%, -42%) scale(0.9);
+  }
+
   #svgAccueil {
-    width    : 45vw;
-    transform: translate(-43%, -50%);
+    width: 45vw;
   }
 
   .mainTitle {
     font-size: 6rem;
-    margin   : 12% 0;
+    margin   : 12% 0 0 0;
   }
 
   .name {
@@ -656,23 +1100,27 @@ p.aboutText:nth-of-type(4) {
   }
 
   #treeMenuText1 {
-    top : 194px;
-    left: 286px;
+    top : 215px;
+    left: 287px;
   }
 
   #treeMenuText2 {
-    top : 119px;
+    top : 141px;
     left: 385px;
   }
 
   #treeMenuText3 {
-    top : 84px;
-    left: 184px;
+    top : 106px;
+    left: 181px;
   }
 
   #treeMenuText4 {
-    top : 216px;
+    top : 238px;
     left: 11px;
+  }
+
+  .isSticky {
+    margin-left: 0;
   }
 
   .navbar {
@@ -710,12 +1158,143 @@ p.aboutText:nth-of-type(4) {
 
   .aboutmeTitle {
     font-size: 4rem;
+    top      : 8vh;
   }
 
   #decorationTree1 {
     left : -24%;
     top  : 30%;
     width: 450px;
+  }
+
+  #designContainer {
+    position: relative;
+  }
+
+  div.designSubContainer{
+    width: fit-content;
+  }
+
+  div.designCarouselContainer{
+    margin: 0;
+  }
+
+  ul.carousel-indicators{
+    bottom: -7%;
+  }
+
+  .designTitle {
+    font-size: 4rem;
+  }
+
+  .carouselFlex {
+    flex-direction: column;
+  }
+
+  .carouselImg{
+    max-width: none;
+    max-height: 100%;
+  }
+
+  .carousel-control-next{
+    top: 101%;
+  }
+
+  .designFlexRight,
+  .designFlexLeft {
+    width : 90vw;
+    height: 40vh;
+  }
+
+  .designFlexRight{
+    height: 20vh;
+    padding: 0;
+  }
+
+  .projectDesignText{
+    width: 100%;
+  }
+
+  .carouselImg{
+    margin-bottom: 2%;
+  }
+
+    h3.projectDesignTitle {
+    font-size  : 3rem;
+  }
+
+  .projectDesignText{
+    font-size: 1.25rem;
+  }
+
+  div.projectMotionTitleContainer{
+    width: 80vw;
+  }
+
+  .motionDesignContainer .designTitle{
+    margin-right: 0%;
+  }
+
+  .carouselFlexMotion .designFlexLeft{
+    justify-content: start;
+  }
+
+  ul.carousel-indicators-motion{
+    left: -8%;
+    bottom: 0;
+  }
+
+  .motionControlNext{
+    top: 94%;
+    left: 30%;
+  }
+
+  div.motionDesignContainer{
+    height: 85vh;
+  }
+  
+  #flower1 {
+    position : absolute;
+    transform: translate(80vw, 50%) scale(1);
+  }
+
+  div.contactContainer {
+    padding-top: 15%;
+    height     : 85vh;
+  }
+
+  .contactTitle {
+    left     : 10%;
+    font-size: 3.75rem;
+  }
+
+  .contactme,
+  .cvDownloadParent p,
+  .cvDownloadParent a {
+    font-size: 1.25rem;
+  }
+
+  .mailAdress {
+    font-size: 2.25rem;
+  }
+
+  .contactPolygon {
+    width        : 65vw;
+    border-radius: 96px 96px 0 0;
+  }
+
+  .cvDownloadParent {
+    width        : 30vw;
+    border-radius: 0 0 55px 55px;
+  }
+
+  #citron1 {
+    top : 30%;
+    left: 75%;
+  }
+
+  #citron2 {
+    left: 3%;
   }
 
 }
@@ -726,14 +1305,17 @@ p.aboutText:nth-of-type(4) {
     height: 93vh;
   }
 
+  #svgAccueilParent {
+    transform: translate(-48%, -42%) scale(0.9);
+  }
+
   #svgAccueil {
-    width    : 55vw;
-    transform: translate(-43%, -50%);
+    width: 55vw;
   }
 
   .mainTitle {
-    font-size: 5rem;
-    margin   : 30% 0 12% 0;
+    font-size: 4rem;
+    margin   : 15% 0 0 0;
   }
 
   .name {
@@ -742,7 +1324,7 @@ p.aboutText:nth-of-type(4) {
   }
 
   .arrowContainer a {
-    margin: 15vh 0 0 0;
+    margin: 30vh 0 0 0;
   }
 
   .treeMenuParent #treeMenu {
@@ -758,22 +1340,22 @@ p.aboutText:nth-of-type(4) {
   }
 
   #treeMenuText1 {
-    top : 98px;
-    left: 155px;
+    top : 113px;
+    left: 160px;
   }
 
   #treeMenuText2 {
-    top : 56px;
-    left: 217px;
+    top : 71px;
+    left: 215px;
   }
 
   #treeMenuText3 {
-    top : 35px;
-    left: 100px;
+    top : 49px;
+    left: 105px;
   }
 
   #treeMenuText4 {
-    top : 112px;
+    top : 126px;
     left: 3px;
   }
 
@@ -792,7 +1374,7 @@ p.aboutText:nth-of-type(4) {
   }
 
   .aboutmeTitle {
-    top      : 150%;
+    top      : 7vh;
     font-size: 3rem;
   }
 
@@ -802,6 +1384,82 @@ p.aboutText:nth-of-type(4) {
     width: 350px;
   }
 
+  .designTitle {
+    font-size: 3rem;
+  }
+
+  h3.projectDesignTitle {
+    font-size  : 2rem;
+  }
+
+  #designDivider {
+    width: calc(150% + 1.3px);
+    right: 0;
+  }
+
+  .carousel-control-next{
+    top: 110%;
+    left: 35%;
+    width: 30%;
+  }
+
+  ul.carousel-indicators{
+    width: 70vw;
+    left: 5%;
+  }
+
+  .contactTitle {
+    font-size: 3rem;
+  }
+
+  .mailAdress {
+    font-size: 2rem;
+  }
+
+  .contactme,
+  .cvDownloadParent p,
+  .cvDownloadParent a {
+    font-size: 1rem;
+  }
+
+  .contactPolygon {
+    width        : 75vw;
+    border-radius: 70px 70px 0 0;
+
+  }
+
+  .social img {
+    width: 100%;
+  }
+
+  .cvDownloadParent {
+    width        : 40vw;
+    border-radius: 0 0 45px 45px;
+  }
+
+  #contactDivider {
+    bottom: -15px;
+  }
+
+  div.contactContainer {
+    height     : 90vh;
+    padding-top: 15%;
+  }
+
+  #citron1 {
+    width         : 150px;
+    top           : 20%;
+    left          : 80%;
+    animation-name: floating;
+  }
+
+  #citron2 {
+    bottom        : -3%;
+    left          : 5%;
+    width         : 150px;
+    animation-name: floatingBis;
+  }
+
 }
 
 @media screen and (max-width:550px) {
@@ -809,9 +1467,13 @@ p.aboutText:nth-of-type(4) {
     width: 75vw;
   }
 
+  .navbar {
+    margin-top: 30px;
+  }
+
   .navbarLink {
-    font-size: 0.95rem;
-    padding  : 0 13px;
+    font-size: 0.85rem;
+    padding  : 0 7px;
   }
 
   span.dots {
@@ -832,9 +1494,50 @@ p.aboutText:nth-of-type(4) {
     width: 300px;
   }
 
+  #flower1 {
+    width    : 200px;
+    transform: translate(70vw, 50%) scale(0.8);
+  }
+
+  div.contactContainer {
+    height     : 80vh;
+    padding-top: 45%;
+  }
+
+  .mailAdress {
+    font-size: 1.75rem;
+  }
+
+  .contactPolygon {
+    width: 85vw;
+  }
+
+  #contactDivider {
+    bottom: -5px;
+  }
+
+  #citron1 {
+    width: 100px;
+    top  : 10%;
+    left : 82%;
+  }
+
+  #citron2 {
+    width: 100px;
+    left : 3%;
+  }
+
 }
 
 @media screen and (max-width:380px) {
+
+  .mainTitle {
+    font-size: 3rem;
+  }
+
+  .name {
+    font-size: 3rem;
+  }
 
   .navbarLink {
     font-size: 0.75rem;
@@ -846,7 +1549,8 @@ p.aboutText:nth-of-type(4) {
   }
 
   .aboutmeTitle {
-    top      : 110%;
+    top      : 6vh;
+    width    : 60vw;
     font-size: 2.5rem;
   }
 
@@ -856,21 +1560,63 @@ p.aboutText:nth-of-type(4) {
     width: 200px;
   }
 
+  #flower1 {
+    width    : 150px;
+    transform: translate(70vw, 50%) scale(0.6);
+  }
+
+
+  .contactTitle {
+    font-size: 2.5rem;
+  }
+
+  .mailAdress {
+    font-size: 1.5rem;
+  }
+
+  .contactme {
+    font-size: 0.75rem;
+  }
+
+  .cvDownloadParent p,
+  .cvDownloadParent a {
+    font-size: 1rem;
+  }
+
+  .contactPolygon {
+    border-radius: 40px 40px 0 0;
+  }
+
+  .cvDownloadParent {
+    width        : 45vw;
+    border-radius: 0 0 30px 30px;
+  }
+
+  div.contactContainer {
+    height     : 90vh;
+    padding-top: 40%;
+  }
+
+  #citron1 {
+    width: 70px;
+    top  : 10%;
+    left : 82%;
+  }
+
+  #citron2 {
+    width: 80px;
+  }
+
 }
 
 @media screen and (max-width:320px) {
 
-  #svgAccueil {
-    width    : 70vw;
+  #svgAccueilParent {
     transform: translate(-42%, -50%);
   }
 
-  .mainTitle {
-    font-size: 3rem;
-  }
-
-  .name {
-    font-size: 3rem;
+  #svgAccueil {
+    width: 70vw;
   }
 
   div.menuContainer {
@@ -886,8 +1632,12 @@ p.aboutText:nth-of-type(4) {
   }
 
   .aboutmeTitle {
-    top      : 120%;
+    top      : 5vh;
     font-size: 2rem;
+  }
+
+  div.contactContainer {
+    padding-top: 55%;
   }
 
 }
