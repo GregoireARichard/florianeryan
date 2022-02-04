@@ -17,7 +17,7 @@
             xmlns:xlink="http://www.w3.org/1999/xlink"
             width="518"
             height="733"
-            viewBox="0 0 518 733"
+            viewBox="0 0 518 1000"
           >
             <defs>
               <linearGradient
@@ -3120,6 +3120,7 @@
 <script>
 export default {
   mounted: function () {
+
     if (window.outerWidth >= 992) {
       //Hover on homepage's svg
       document
