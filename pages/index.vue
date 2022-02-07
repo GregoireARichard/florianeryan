@@ -3360,7 +3360,6 @@ export default {
             .classList.remove("treeCircleIs3Hover");
         });
     } else {
-      console.log($(".rellax").length);
       let tab = $(".rellax");
       tab.each(function () {
         $(this).addClass("inMobileParallax");
