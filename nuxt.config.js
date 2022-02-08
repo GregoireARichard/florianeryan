@@ -95,6 +95,9 @@ export default {
           citwell_text1 : "I animated their New Year’s card for 2022.",
           citwell_text2 : "This freelance project was very fun!",
           citwell_title : "Citwell New Year‘s Card Animation",
+          design_by : "Design by ",
+          developp_by : "Coded by ",
+          right : "© 2022 - All rights reserved",
 
         },
         fr: {
@@ -134,10 +137,13 @@ export default {
           citwell_text1 : 'J\'ai animé leur carte de voeux pour 2022.',
           citwell_text2 : 'Ce projet freelance a été très fun à réaliser!',
           citwell_title : 'Carte du Nouvel An animée pour Citwell',
+          design_by : "Designé par ",
+          developp_by : "Développé par ",
+          right : "© 2022 - Tous droits réservés",
 
         },
         
-      }
+      },
     }
   },
 

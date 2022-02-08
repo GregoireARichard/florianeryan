@@ -2720,7 +2720,7 @@
           <p>
             {{ $t("resume") }}
           </p>
-          <a href="#">{{ $t("here") }}</a>
+          <a href='#' download='cv'>{{ $t("here") }}</a>
         </div>
       </div>
 
@@ -2950,6 +2950,14 @@
           </linearGradient>
         </defs>
       </svg>
+
+      <footer>
+        <div>
+          <p class="textFooter">{{$t("design_by")}}<span>Floriane Ryan</span></p>
+          <p class="textFooter">{{$t("developp_by")}}<a href="https://jael-beining.fr" target="_blank">Jaël Beining</a> & <a href="">Grégoire Richard</a></p>
+          <p class="textFooter">{{$t("right")}}</p>
+        </div>
+      </footer>
 
       <svg
         width="1451"
