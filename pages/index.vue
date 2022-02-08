@@ -2954,7 +2954,7 @@
       <footer>
         <div>
           <p class="textFooter">{{$t("design_by")}}<span>Floriane Ryan</span></p>
-          <p class="textFooter">{{$t("developp_by")}}<a href="https://jael-beining.fr" target="_blank">Jaël Beining</a> & <a href="">Grégoire Richard</a></p>
+          <p class="textFooter">{{$t("developp_by")}}<a href="https://jael-beining.fr" target="_blank">Jaël Beining</a> & <a href="https://kokorirko.github.io/portfolio-Greg/">Grégoire Richard</a></p>
           <p class="textFooter">{{$t("right")}}</p>
         </div>
       </footer>
