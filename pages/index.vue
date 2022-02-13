@@ -2720,7 +2720,7 @@
           <p>
             {{ $t("resume") }}
           </p>
-          <a href='#' download='cv'>{{ $t("here") }}</a>
+          <a href='/docs/Floriane_Ryan_Resume.pdf' download='Floriane_Ryan-Resume'>{{ $t("here") }}</a>
         </div>
       </div>
 
