@@ -14,9 +14,20 @@
 }
 
 @font-face {
+  font-family: Quicksand-medium;
+  src        : url(fonts/Quicksand-Medium.ttf);
+}
+
+@font-face {
   font-family: Quicksand;
   src        : url(fonts/Quicksand-Light.ttf);
   font-weight: lighter;
+}
+
+@font-face {
+  font-family: Quicksand;
+  src        : url(fonts/Quicksand-Bold.ttf);
+  font-weight: bold;
 }
 
 @font-face {
@@ -55,6 +66,7 @@ p {
 *::selection {
   background-color: rgb(255, 237, 224) !important;
   color           : #5F563F !important;
+  font-weight     : lighter;
 }
 
 *::-moz-selection {
@@ -936,11 +948,38 @@ div.contactTitleContainer {
   animation-timing-function: linear;
 }
 
+footer {
+  display        : flex;
+  width          : 100%;
+  justify-content: center;
+  align-items    : center;
+  flex-direction : column;
+  position       : absolute;
+  z-index        : 1000;
+  bottom         : 2%;
+}
+
+footer p.textFooter {
+  margin-bottom: 0;
+  color        : #806857;
+}
+
+footer p.textFooter a {
+  color          : #806857;
+  font-family    : Quicksand-medium;
+  text-decoration: underline;
+}
+
+footer p.textFooter span {
+  color      : #806857;
+  font-family: Quicksand-medium;
+}
+
 /* Safari Rules */
 @media not all and (min-resolution:.001dpcm) {
   @supports (-webkit-appearance:none) and (display:flow-root) {
-    #divider1 path{
-      transform: scale(1.2);
+    #divider1 path {
+      transform       : scale(1.2);
       transform-origin: bottom;
     }
 
@@ -948,7 +987,7 @@ div.contactTitleContainer {
       height: auto;
     }
 
-    .menuContainer #backgroundMenu{
+    .menuContainer #backgroundMenu {
       height: auto;
     }
 
@@ -1499,6 +1538,10 @@ div.contactTitleContainer {
     animation-name: floatingBis;
   }
 
+  footer p.textFooter {
+    font-size: 0.75rem;
+  }
+
 }
 
 @media screen and (max-width:550px) {
@@ -1564,6 +1607,10 @@ div.contactTitleContainer {
   #citron2 {
     width: 100px;
     left : 3%;
+  }
+
+  footer p.textFooter {
+    font-size: 0.5rem;
   }
 
 }
