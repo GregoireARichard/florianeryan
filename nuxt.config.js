@@ -8,6 +8,7 @@ export default {
     htmlAttrs: {
       lang: 'en'
     },
+    
     meta: [
       { charset: 'utf-8' },
       { name: 'viewport', content: 'width=device-width, initial-scale=1' },
@@ -50,8 +51,10 @@ export default {
 
   // Modules: https://go.nuxtjs.dev/config-modules
   modules: [
-    '@nuxtjs/i18n'
+    '@nuxtjs/i18n',
+    ['nuxt-matomo', { matomoUrl: '//floriane-ryan.com/', siteId: 1 }],
   ],
+  
   i18n: {
     locales: ['en', 'fr'],
     defaultLocale: 'en',

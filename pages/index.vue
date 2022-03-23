@@ -3119,7 +3119,20 @@
 
 <script>
 export default {
+
+  
   mounted: function () {
+    var _paq = window._paq = window._paq || [];
+
+    _paq.push(['trackPageView']);
+    _paq.push(['enableLinkTracking']);
+    (function() {
+      var u="https://florianeryan.matomo.cloud/";
+      _paq.push(['setTrackerUrl', u+'matomo.php']);
+      _paq.push(['setSiteId', '1']);
+      var d=document, g=d.createElement('script'), s=d.getElementsByTagName('script')[0];
+      g.async=true; g.src='//cdn.matomo.cloud/florianeryan.matomo.cloud/matomo.js'; s.parentNode.insertBefore(g,s);
+    })();
 
     if (window.outerWidth >= 992) {
       //Hover on homepage's svg
