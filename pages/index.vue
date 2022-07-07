@@ -914,7 +914,7 @@
           fill="#E3C7B2"
         />
       </svg>
-      <div id="flowerParent1" >
+      <div id="flowerParent1">
         <svg
           width="234"
           height="262"
@@ -1048,12 +1048,12 @@
             <div id="carousel1" class="carousel slide" data-ride="carousel">
               <!-- Indicators -->
               <ul class="carousel-indicators">
-                <li data-target="#demo" data-slide-to="0" class="active"></li>
-                <li data-target="#demo" data-slide-to="1"></li>
-                <li data-target="#demo" data-slide-to="2"></li>
-                <li data-target="#demo" data-slide-to="3"></li>
-                <li data-target="#demo" data-slide-to="4"></li>
-                <li data-target="#demo" data-slide-to="5"></li>
+                <li data-target="#carousel1" data-slide-to="0" class="active"></li>
+                <li data-target="#carousel1" data-slide-to="1"></li>
+                <li data-target="#carousel1" data-slide-to="2"></li>
+                <li data-target="#carousel1" data-slide-to="3"></li>
+                <li data-target="#carousel1" data-slide-to="4"></li>
+                <li data-target="#carousel1" data-slide-to="5"></li>
               </ul>
 
               <!-- The slideshow -->
@@ -1109,7 +1109,7 @@
                         alt="netflix poster pic"
                         class="carouselImg"
                       />
-                    </div>                  
+                    </div>
                     <div class="designFlexRight">
                       <div class="projectDesignTitleContainer">
                         <h3 class="projectDesignTitle">
@@ -1166,7 +1166,7 @@
                 </div>
                 <div class="carousel-item">
                   <div class="carouselFlex">
-                    <div class="designFlexLeft">                      
+                    <div class="designFlexLeft">
                       <img
                         :src="require('../assets/img/alcool.png')"
                         alt="Alcohol branding pic"
@@ -2154,10 +2154,10 @@
             <div id="carousel2" class="carousel slide" data-ride="carousel">
               <!-- Indicators -->
               <ul class="carousel-indicators carousel-indicators-motion">
-                <li data-target="#demo" data-slide-to="0" class="active"></li>
-                <li data-target="#demo" data-slide-to="1"></li>
-                <li data-target="#demo" data-slide-to="2"></li>
-                <li data-target="#demo" data-slide-to="3"></li>
+                <li data-target="#carousel2" data-slide-to="0" class="active"></li>
+                <li data-target="#carousel2" data-slide-to="1"></li>
+                <li data-target="#carousel2" data-slide-to="2"></li>
+                <li data-target="#carousel2" data-slide-to="3"></li>
               </ul>
 
               <!-- The slideshow -->
@@ -2165,16 +2165,15 @@
                 <div class="carousel-item active">
                   <div class="carouselFlex carouselFlexMotion">
                     <div class="designFlexLeft">
-                      <a href="https://youtu.be/OksYdPDb_MI" target="_blank">
-                        <img
-                          :src="require('../assets/img/thumbnail.png')"
-                          alt="synerg pic"
-                          class="carouselImg"
-                        />
-                      </a>
+                      <iframe class="carouselImg" src="https://youtube.com/embed/OksYdPDb_MI" frameborder="0" controls="0"> </iframe>
                     </div>
                     <div class="designFlexRight">
-                      <div class="projectDesignTitleContainer projectMotionTitleContainer">
+                      <div
+                        class="
+                          projectDesignTitleContainer
+                          projectMotionTitleContainer
+                        "
+                      >
                         <h3 class="projectDesignTitle">
                           {{ $t("blossom_title") }}
                         </h3>
@@ -2188,16 +2187,15 @@
                 <div class="carousel-item">
                   <div class="carouselFlex carouselFlexMotion">
                     <div class="designFlexLeft">
-                      <a href="https://youtu.be/hR0_8UJ2peQ" target="_blank">
-                        <img
-                          :src="require('../assets/img/thumbnail.png')"
-                          alt="clothing pic"
-                          class="carouselImg"
-                        />
-                      </a>
+                      <iframe class="carouselImg" src="https://youtube.com/embed/hR0_8UJ2peQ" frameborder="0" controls="0"></iframe>
                     </div>
                     <div class="designFlexRight">
-                      <div class="projectDesignTitleContainer projectMotionTitleContainer">
+                      <div
+                        class="
+                          projectDesignTitleContainer
+                          projectMotionTitleContainer
+                        "
+                      >
                         <h3 class="projectDesignTitle">
                           {{ $t("catapulz_title") }}
                         </h3>
@@ -2211,17 +2209,16 @@
                 <div class="carousel-item">
                   <div class="carouselFlex carouselFlexMotion">
                     <div class="designFlexLeft">
-                      <a href="https://youtu.be/bSfSX3n8jkU" target="_blank">
-                        <img
-                          :src="require('../assets/img/thumbnail.png')"
-                          alt="netflix poster pic"
-                          class="carouselImg"
-                        />
-                      </a>
-                    </div>                  
+                      <iframe class="carouselImg" src="https://youtube.com/embed/bSfSX3n8jkU" frameborder="0" controls="0"></iframe>
+                    </div>
                     <div class="designFlexRight">
-                      <div class="projectDesignTitleContainer projectMotionTitleContainer">
-                        <h3 class="projectDesignTitle ">
+                      <div
+                        class="
+                          projectDesignTitleContainer
+                          projectMotionTitleContainer
+                        "
+                      >
+                        <h3 class="projectDesignTitle">
                           {{ $t("cajoo_title") }}
                         </h3>
                       </div>
@@ -2234,17 +2231,16 @@
                 <div class="carousel-item">
                   <div class="carouselFlex carouselFlexMotion">
                     <div class="designFlexLeft">
-                      <a href="https://youtu.be/1ZvTsY2JIKs" target="_blank">
-                        <img
-                          :src="require('../assets/img/thumbnail.png')"
-                          alt="instagram feed pic"
-                          class="carouselImg"
-                        />
-                      </a>
+                      <iframe class="carouselImg" src="https://youtube.com/embed/1ZvTsY2JIKs" frameborder="0" controls="0"></iframe>
                     </div>
                     <div class="designFlexRight">
-                      <div class="projectDesignTitleContainer projectMotionTitleContainer">
-                        <h3 class="projectDesignTitle ">
+                      <div
+                        class="
+                          projectDesignTitleContainer
+                          projectMotionTitleContainer
+                        "
+                      >
+                        <h3 class="projectDesignTitle">
                           {{ $t("citwell_title") }}
                         </h3>
                       </div>
@@ -2287,7 +2283,6 @@
             </div>
           </div>
         </div>
-
       </div>
       <svg
         width="1441"
@@ -2720,7 +2715,11 @@
           <p>
             {{ $t("resume") }}
           </p>
-          <a href='/docs/Floriane_Ryan_Resume.pdf' download='Floriane_Ryan-Resume'>{{ $t("here") }}</a>
+          <a
+            href="/docs/Floriane_Ryan_Resume.pdf"
+            download="Floriane_Ryan-Resume"
+            >{{ $t("here") }}</a
+          >
         </div>
       </div>
 
@@ -2953,9 +2952,18 @@
 
       <footer>
         <div>
-          <p class="textFooter">{{$t("design_by")}}<span>Floriane Ryan</span></p>
-          <p class="textFooter">{{$t("developp_by")}}<a href="https://jael-beining.fr" target="_blank">Jaël Beining</a> & <a href="https://kokorirko.github.io/portfolio-Greg/">Grégoire Richard</a></p>
-          <p class="textFooter">{{$t("right")}}</p>
+          <p class="textFooter">
+            {{ $t("design_by") }}<span>Floriane Ryan</span>
+          </p>
+          <p class="textFooter">
+            {{ $t("developp_by")
+            }}<a href="https://jael-beining.fr" target="_blank">Jaël Beining</a>
+            &
+            <a href="https://kokorirko.github.io/portfolio-Greg/"
+              >Grégoire Richard</a
+            >
+          </p>
+          <p class="textFooter">{{ $t("right") }}</p>
         </div>
       </footer>
 
@@ -3127,19 +3135,21 @@
 
 <script>
 export default {
-
-  
   mounted: function () {
-    var _paq = window._paq = window._paq || [];
+    var _paq = (window._paq = window._paq || []);
 
-    _paq.push(['trackPageView']);
-    _paq.push(['enableLinkTracking']);
-    (function() {
-      var u="https://florianeryan.matomo.cloud/";
-      _paq.push(['setTrackerUrl', u+'matomo.php']);
-      _paq.push(['setSiteId', '1']);
-      var d=document, g=d.createElement('script'), s=d.getElementsByTagName('script')[0];
-      g.async=true; g.src='//cdn.matomo.cloud/florianeryan.matomo.cloud/matomo.js'; s.parentNode.insertBefore(g,s);
+    _paq.push(["trackPageView"]);
+    _paq.push(["enableLinkTracking"]);
+    (function () {
+      var u = "https://florianeryan.matomo.cloud/";
+      _paq.push(["setTrackerUrl", u + "matomo.php"]);
+      _paq.push(["setSiteId", "1"]);
+      var d = document,
+        g = d.createElement("script"),
+        s = d.getElementsByTagName("script")[0];
+      g.async = true;
+      g.src = "//cdn.matomo.cloud/florianeryan.matomo.cloud/matomo.js";
+      s.parentNode.insertBefore(g, s);
     })();
 
     if (window.outerWidth >= 992) {
